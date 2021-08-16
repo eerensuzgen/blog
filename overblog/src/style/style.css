@@ -1,7 +1,33 @@
-/* Navbar section */
+/*
+=====================================================================
+*   kuskulu.com web design
+*   url: github.com/eerensuzgen/blog
+*   12-08-2021
+=====================================================================
+   TOC:
+   a. About
+   b. Contact
+   c. Footer 
+   d. Header
+   e. HomePage
+    e.1 HomePage About
+    e.2 HomePage Start
+    e.3 HomePage Blog
+   f. Not Found
+   g. Blog
+   h. Blog Detail
+   
+===================================================================== */
+
 body {
   background: white;
 }
+
+a {
+  text-decoration: none;
+}
+
+/* Navbar section */
 .navbar {
   /* Set the navbar to fixed position */
   top: 0; /* Position the navbar at the top of the page */
@@ -77,7 +103,7 @@ body {
   color: "#ffffff";
 }
 
-/**/
+/* Footer Section */
 .footerBlock {
   display: flex;
   align-items: center;
@@ -101,12 +127,19 @@ body {
 .footerIcon:hover {
   color: red;
 }
-/**/
+#footerCreater {
+  font-weight: bold;
+  font-style: italic;
+  text-decoration: none;
+  color: black;
+}
+/* StartPage section */
+
 #startPageImage {
   width: 100%;
   height: 721px;
 }
-/**/
+/* InfoAbout Section */
 .infoAbout {
   display: flex;
   flex-direction: row;
@@ -119,8 +152,12 @@ body {
   margin-right: 15%;
 }
 #pp {
+  width: 17%;
   border-radius: 100%;
 }
-a {
-  text-decoration: none;
+.infoAboutButton {
+  color: #000000;
+}
+.infoAboutButton:hover {
+  color: lightseagreen;
 }

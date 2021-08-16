@@ -6,7 +6,7 @@ export default class StartPage extends Component {
       <div>
         <img
           alt="startPage"
-          src="./img/startPage3.jpg"
+          src="./img/background.jpg"
           id="startPageImage"
         ></img>
       </div>

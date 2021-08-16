@@ -5,7 +5,7 @@ export default class InfoAbout extends Component {
     return (
       <infoAbout>
         <div className="infoAbout">
-          <img src="./img/pp.jpg" alt="pp" width="15%" id="pp" />
+          <img src="./img/pp.jpg" alt="pp" id="pp" />
           <div className="infoAboutText">
             <h1>Hakkımda</h1>
             <hr />
@@ -17,9 +17,11 @@ export default class InfoAbout extends Component {
               Cras sodales neque nec massa pellentesque laoreet. Nullam laoreet
               est at aliquam porttitor. Maecenas a bibendum ligula. Aliquam erat
               volutpat. Donec ac turpis at justo dictum viverra. Donec sit amet
-              molestie diam. Daha detaylı bilgiye <a href="/#">buradan</a>{" "}
-              ulaşabilirsiniz
+              molestie diam.
             </p>
+            <a href="/about" className="infoAboutButton">
+              Detaylı bilgi için tıklayınız.
+            </a>
           </div>
         </div>
       </infoAbout>

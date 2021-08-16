@@ -8,6 +8,7 @@ export default class Footer extends Component {
           <a
             href="https://www.instagram.com/alpagutkaslan"
             target="_blank"
+            rel="noreferrer"
             className="footerIcon"
           >
             {" "}
@@ -16,6 +17,7 @@ export default class Footer extends Component {
           <a
             href="https://www.twitter.com/alpagutkaslan"
             target="_blank"
+            rel="noreferrer"
             className="footerIcon"
           >
             {" "}
@@ -24,6 +26,7 @@ export default class Footer extends Component {
           <a
             href="https://www.linkedin.com/in/enes-karaaslan-366939213/"
             target="_blank"
+            rel="noreferrer"
             className="footerIcon"
           >
             {" "}
@@ -31,7 +34,10 @@ export default class Footer extends Component {
           </a>
         </div>
         <div className="footerBlock1">
-          &copy; Copyright 2021 Design by <a href="/"> XXX</a>
+          &copy; Copyright 2021 Design by&nbsp;
+          <a href="/" id="footerCreater">
+            SÜZKON
+          </a>
         </div>
       </footer>
     );
