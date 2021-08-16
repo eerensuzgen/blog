@@ -34,7 +34,7 @@ export default class Footer extends Component {
           </a>
         </div>
         <div className="footerBlock1">
-          &copy; Copyright 2021 Design by&nbsp;
+          &copy; Copyright 2021 | Design by&nbsp;
           <a href="/" id="footerCreater">
             SÜZKON
           </a>
