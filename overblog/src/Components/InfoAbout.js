@@ -3,7 +3,7 @@ import React, { Component } from "react";
 export default class InfoAbout extends Component {
   render() {
     return (
-      <infoAbout>
+      <infoabout>
         <div className="infoAbout">
           <img src="./img/pp.jpg" alt="pp" id="pp" />
           <div className="infoAboutText">
@@ -24,7 +24,7 @@ export default class InfoAbout extends Component {
             </a>
           </div>
         </div>
-      </infoAbout>
+      </infoabout>
     );
   }
 }

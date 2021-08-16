@@ -94,6 +94,9 @@ a {
   height: 100%;
   cursor: pointer;
 }
+.navLinks:hover {
+  color: blue;
+}
 .navLinks:active {
   color: #000000;
 }
@@ -104,60 +107,133 @@ a {
 }
 
 /* Footer Section */
-.footerBlock {
+footer .footerBlock {
   display: flex;
   align-items: center;
   justify-content: center;
   margin-top: 3%;
   margin-bottom: 1%;
 }
-.footerBlock1 {
+footer .footerBlock1 {
   display: flex;
   align-items: center;
   justify-content: center;
 
   margin-bottom: 2%;
 }
-.footerIcon {
+footer .footerIcon {
   padding-right: 0.7rem;
   padding-left: 0.7rem;
   color: black;
   text-decoration: none;
 }
-.footerIcon:hover {
-  color: red;
+footer .footerIcon:hover {
+  color: blue;
 }
-#footerCreater {
+footer #footerCreater {
   font-weight: bold;
   font-style: italic;
   text-decoration: none;
   color: black;
 }
+footer #footerCreater:hover {
+  color: blue;
+}
 /* StartPage section */
-
-#startPageImage {
+startpage #startPageImage {
   width: 100%;
   height: 721px;
 }
 /* InfoAbout Section */
-.infoAbout {
+infoabout .infoAbout {
   display: flex;
   flex-direction: row;
   margin-left: 15%;
   margin-top: 13.2%;
   margin-bottom: 13.2%;
 }
-.infoAboutText {
+infoabout .infoAboutText {
   margin-left: 8%;
   margin-right: 15%;
 }
-#pp {
+infoabout #pp {
   width: 17%;
   border-radius: 100%;
 }
-.infoAboutButton {
+infoabout .infoAboutButton {
   color: #000000;
 }
-.infoAboutButton:hover {
-  color: lightseagreen;
+infoabout .infoAboutButton:hover {
+  color: blue;
+}
+
+/*   */
+
+shortblog .shortBlogBox {
+  padding-top: 5%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+shortblog .shortBlogHr {
+  margin-left: 15%;
+  margin-right: 15%;
+}
+shortblog .shortBlogInBox {
+  border: 10px;
+  border-color: #000000;
+}
+shortblog .shortBlogMainTitle {
+  text-align: center;
+  font-weight: bold;
+
+  font-size: 50px;
+}
+shortblog .shortBlogTitle {
+  text-align: center;
+  font-weight: bold;
+  padding-bottom: 5%;
+  font-size: 50px;
+}
+shortblog .shortBlogSubtitle {
+  font-style: italic;
+  font-weight: 300;
+  font-size: 20px;
+  text-align: center;
+}
+shortblog .shortBlogText {
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 200;
+  font-size: 15px;
+  text-align: center;
+}
+shortblog .shortBlogButton {
+  font-weight: bold;
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+  font-style: italic;
+  color: #000000;
+}
+shortblog .shortBlogButton:hover {
+  color: blue;
+}
+
+shortblog #shortBlogImage {
+  height: 300px;
+  margin-bottom: 5%;
+}
+shortblog .shortBlogLink {
+  margin-top: 3%;
+  display: flex;
+  justify-content: center;
+  color: #000000;
+  align-items: center;
+  font-size: 35px;
+}
+shortblog .shortBlogLink:hover {
+  color: blue;
 }
