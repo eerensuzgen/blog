@@ -4,6 +4,7 @@ export default class Footer extends Component {
   render() {
     return (
       <footer>
+        <hr />
         <div className="footerBlock">
           <a
             href="https://www.instagram.com/alpagutkaslan"
@@ -34,10 +35,12 @@ export default class Footer extends Component {
           </a>
         </div>
         <div className="footerBlock1">
-          &copy; Copyright 2021 | Design by&nbsp;
-          <a href="/" id="footerCreater">
-            SÜZKON
-          </a>
+          <p className="footerCopyRight">
+            &copy; Copyright 2021 | Design by&nbsp;
+            <a href="/" id="footerCreater">
+              SÜZKON
+            </a>
+          </p>
         </div>
       </footer>
     );

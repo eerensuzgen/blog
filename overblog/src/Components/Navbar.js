@@ -1,7 +1,17 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function Navbar() {
-  window.addEventListener("scroll", navScroll);
+  const url = "http://localhost:3000/";
+  window.addEventListener("DOMContentLoaded", NavController);
+  function NavController() {
+    if (document.URL === url) {
+      window.addEventListener("scroll", navScroll);
+    } else {
+      document.getElementById("navigation").classList.add("scrollNav");
+    }
+  }
+
   function navScroll() {
     if (window.scrollY >= 75) {
       document.getElementById("navigation").classList.add("scrollNav");
@@ -10,37 +20,37 @@ export default function Navbar() {
     }
   }
   return (
-    <div>
-      <header>
-        <nav id="navigation" class="navbar">
+    <header>
+      <div>
+        <nav id="navigation" className="navbar">
           <div className="navContainer">
             {" "}
             <img src="./img/logo.png" alt="logo" id="navLogo" height="81%" />
-            <ul class="navMenu">
-              <li class="navItem">
-                <a href="/" class="navLinks">
-                  Ana Sayfa
-                </a>
+            <ul className="navMenu">
+              <li className="navItem">
+                <Link to="/" className="navLinks">
+                  Anasayfa
+                </Link>
               </li>
-              <li class="navItem">
-                <a href="/about" class="navLinks">
+              <li className="navItem">
+                <Link to="/about" className="navLinks">
                   Hakkımda
-                </a>
+                </Link>
               </li>
-              <li class="navItem">
-                <a href="/blog" class="navLinks">
+              <li className="navItem">
+                <Link to="/blog" className="navLinks">
                   Yazılar
-                </a>
+                </Link>
               </li>
-              <li class="navItem">
-                <a href="/contact" class="navLinks">
+              <li className="navItem">
+                <Link to="/contact" className="navLinks">
                   İletişim
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
         </nav>
-      </header>
-    </div>
+      </div>
+    </header>
   );
 }

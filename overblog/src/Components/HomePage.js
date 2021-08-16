@@ -6,11 +6,11 @@ import Blog from "./ShortBlog";
 export default class HomePage extends Component {
   render() {
     return (
-      <homepage>
+      <div>
         <Start />
         <About />
         <Blog />
-      </homepage>
+      </div>
     );
   }
 }
