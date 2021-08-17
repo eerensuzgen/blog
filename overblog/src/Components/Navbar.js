@@ -28,24 +28,38 @@ export default function Navbar() {
             <img src="./img/logo.png" alt="logo" id="navLogo" height="81%" />
             <ul className="navMenu">
               <li className="navItem">
-                <Link to="/" className="navLinks">
-                  Anasayfa
-                </Link>
+                <a href="/" className="navLinks">
+                  Ana Sayfa{" "}
+                </a>
+                {/* <Link to="/" className="navLinks">
+                    Anasayfa
+                  </Link> */}
               </li>
               <li className="navItem">
-                <Link to="/about" className="navLinks">
+                <a href="/about" className="navLinks">
                   Hakkımda
-                </Link>
+                </a>
+                {/* <Link to="/about" className="navLinks">
+                  Hakkımda
+                </Link> */}
               </li>
               <li className="navItem">
-                <Link to="/blog" className="navLinks">
+                <a href="/blog" className="navLinks">
+                  {" "}
                   Yazılar
-                </Link>
+                </a>
+                {/* <Link to="/blog" className="navLinks">
+                  Yazılar
+                </Link> */}
               </li>
               <li className="navItem">
-                <Link to="/contact" className="navLinks">
+                <a href="/contact" className="navLinks">
+                  {" "}
                   İletişim
-                </Link>
+                </a>
+                {/* <Link to="/contact" className="navLinks">
+                  İletişim
+                </Link> */}
               </li>
             </ul>
           </div>

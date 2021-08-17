@@ -26,7 +26,61 @@ body {
 a {
   text-decoration: none;
 }
+.pageDiv {
+  margin-top: 80px;
+}
 
+/* About Section */
+#aboutImage {
+  height: 300px;
+  margin: 5%;
+  margin-top: 0;
+  float: left;
+}
+.aboutTitle {
+  text-align: center;
+  font-size: 50px;
+  font-weight: bold;
+  padding: 1%;
+}
+.aboutBioBlock {
+  display: flex;
+  flex-direction: row;
+  padding-top: 2%;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+.aboutBioText {
+  float: left;
+  font-family: "Times New Roman", Times, serif;
+}
+.aboutHr {
+  margin-left: 10%;
+  margin-right: 10%;
+}
+.aboutSchoolImage {
+  margin-top: 2%;
+  align-items: center;
+  justify-content: center;
+  margin-left: 35%;
+  height: 150px;
+}
+.aboutSchoolImage2 {
+  margin-left: 45%;
+
+  height: 150px;
+}
+.aboutSchoolTitle {
+  text-align: center;
+}
+.aboutSchoolSpan {
+  font-weight: 400;
+}
+.aboutSchoolDate {
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 4%;
+}
 /* Navbar section */
 .navbar {
   /* Set the navbar to fixed position */
@@ -97,7 +151,8 @@ a {
 
 /* Footer Section */
 footer {
-  background-color: gray;
+  background-color: black;
+  color: #fff;
 }
 footer .footerBlock {
   display: flex;
@@ -117,7 +172,7 @@ footer .footerBlock1 {
 footer .footerIcon {
   padding-right: 0.7rem;
   padding-left: 0.7rem;
-  color: black;
+  color: #fff;
   text-decoration: none;
 }
 footer .footerIcon:hover {
@@ -127,7 +182,7 @@ footer #footerCreater {
   font-weight: bold;
   font-style: italic;
   text-decoration: none;
-  color: black;
+  color: #fff;
 }
 footer #footerCreater:hover {
   color: blue;
