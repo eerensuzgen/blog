@@ -6,7 +6,7 @@ export default class InfoAbout extends Component {
       <div className="infoAbout">
         <img src="./img/pp.jpg" alt="pp" id="pp" />
         <div className="infoAboutText">
-          <h1>Hakkımda</h1>
+          <h1 className="infoAboutTitle">Hakkımda</h1>
           <hr />
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a

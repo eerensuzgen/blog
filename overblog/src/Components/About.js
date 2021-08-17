@@ -50,11 +50,7 @@ export default class About extends Component {
         <div>
           <h1 className="aboutTitle">Eğitim</h1>
           <hr className="aboutHr" />
-          <img
-            src="./img/aü.jpg"
-            alt="schoolImage"
-            className="aboutSchoolImage"
-          />
+          <img src="./img/aü.jpg" alt="schoolImage" id="aboutSchoolImage" />
           <h1 className="aboutSchoolTitle">
             Ankara Üniversitesi -
             <span className="aboutSchoolSpan"> Gazetecilik</span>

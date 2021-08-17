@@ -3,56 +3,131 @@ import React, { Component } from "react";
 export default class ShortBlog extends Component {
   render() {
     return (
-      <div>
-        <h1 className="shortBlogMainTitle">Yazılar</h1>
-        <hr className="shortBlogHr" />
-        <div className="shortBlogBox">
-          <div className="col-md-4 shortBlogInBox">
-            <img src="./img/blog1.jpg" alt="yazı" id="shortBlogImage" />
-            <h2 className="shortBlogTitle">
-              Araştırmacı Gazetecilik ve Demokrasi
-            </h2>
-            <h3 className="shortBlogSubtitle">
-              Kamunun Bilgi Alma Hakkı ve Dördüncü Güç
-            </h3>
-            <p className="shortBlogText">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a
-              est et metus tincidunt interdum. Cras pellentesque imperdiet sem
-              in posuere. Nulla varius justo turpis. Phasellus porttitor
-              fermentum nisl at tincidunt. Aenean ornare elementum fermentum.
-              Cras sodales neque nec massa pellentesque laoreet. Nullam laoreet
-              est at aliquam porttitor. Maecenas a bibendum ligula. Aliquam erat
-              volutpat. Donec ac turpis at justo dictum viverra. Donec sit amet
-              molestie diam.
-            </p>
-            <a href="*" className="shortBlogButton">
-              Devamı için tıklayınız
-            </a>
+      <div className="shortBlog">
+        <section class="wrapper">
+          <h1 className="shortBlogTitle">Yazılar</h1>
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-4">
+                <div
+                  class="card text-white card-has-bg click-col"
+                  style={{
+                    backgroundImage: `url("https://source.unsplash.com/600x900/?tech,street")`,
+                  }}
+                >
+                  <div class="card-img-overlay d-flex flex-column">
+                    <div class="card-body">
+                      <small class="card-meta mb-2">İletişim</small>
+                      <h4 class="card-title mt-0 ">
+                        <a class="text-white" herf="*">
+                          Sözlü İletişim ve Maske: Geçmişe mi Dönüyoruz?
+                        </a>
+                      </h4>
+                      <small>
+                        <i class="far fa-clock"></i> Ağustos 17, 2021
+                      </small>
+                    </div>
+                    <div class="card-footer">
+                      <div class="media">
+                        <img
+                          class="mr-3 rounded-circle"
+                          src="./img/pp.jpg"
+                          alt="Generic placeholder image"
+                          style={{ maxWidth: "50px" }}
+                        />
+                        <div class="media-body">
+                          <h6 class="my-0 text-white d-block">
+                            Enes Karaaslan
+                          </h6>
+                          <small>Gazeteci </small>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <div
+                  class="card text-white card-has-bg click-col"
+                  style={{
+                    backgroundImage: `url("https://source.unsplash.com/600x900/?computer,design")`,
+                  }}
+                >
+                  <div class="card-img-overlay d-flex flex-column">
+                    <div class="card-body">
+                      <small class="card-meta mb-2">
+                        {" "}
+                        Kamunun Bilgi Alma Hakkı ve Dördüncü Güç
+                      </small>
+                      <h4 class="card-title mt-0 ">
+                        <a class="text-white" herf="#">
+                          Araştırmacı Gazetecilik ve Demokrasi
+                        </a>
+                      </h4>
+                      <small>
+                        <i class="far fa-clock"></i> Ağustos 17, 2021
+                      </small>
+                    </div>
+                    <div class="card-footer">
+                      <div class="media">
+                        <img
+                          class="mr-3 rounded-circle"
+                          src="./img/pp.jpg"
+                          alt="Generic placeholder image"
+                          style={{ maxWidth: "50px" }}
+                        />
+                        <div class="media-body">
+                          <h6 class="my-0 text-white d-block">
+                            Enes Karaaslan
+                          </h6>
+                          <small>Gazeteci</small>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <div
+                  class="card text-white card-has-bg click-col"
+                  style={{
+                    backgroundImage: `url("https://source.unsplash.com/600x900/?tree,nature")`,
+                  }}
+                >
+                  <div class="card-img-overlay d-flex flex-column">
+                    <div class="card-body">
+                      <small class="card-meta mb-2">Title</small>
+                      <h4 class="card-title mt-0 ">
+                        <a class="text-white" herf="#">
+                          Blog 3
+                        </a>
+                      </h4>
+                      <small>
+                        <i class="far fa-clock"></i> Çok Yakında
+                      </small>
+                    </div>
+                    <div class="card-footer">
+                      <div class="media">
+                        <img
+                          class="mr-3 rounded-circle"
+                          src="./img/pp.jpg"
+                          alt="Generic placeholder image"
+                          style={{ maxWidth: "50px" }}
+                        />
+                        <div class="media-body">
+                          <h6 class="my-0 text-white d-block">
+                            Enes Karaaslan
+                          </h6>
+                          <small>Gazeteci</small>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-          <div className="col-md-4">
-            <img src="./img/blog2.jpg" alt="yazı" id="shortBlogImage" />
-            <h2 className="shortBlogTitle">
-              Sözlü İletişim ve Maske: Geçmişe mi Dönüyoruz?
-            </h2>
-            <h3 className="shortBlogSubtitle">***</h3>
-            <p className="shortBlogText">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a
-              est et metus tincidunt interdum. Cras pellentesque imperdiet sem
-              in posuere. Nulla varius justo turpis. Phasellus porttitor
-              fermentum nisl at tincidunt. Aenean ornare elementum fermentum.
-              Cras sodales neque nec massa pellentesque laoreet. Nullam laoreet
-              est at aliquam porttitor. Maecenas a bibendum ligula. Aliquam erat
-              volutpat. Donec ac turpis at justo dictum viverra. Donec sit amet
-              molestie diam.
-            </p>
-            <a href="*" className="shortBlogButton">
-              Devamı için tıklayınız
-            </a>
-          </div>
-        </div>
-        <a href="/blog" className="shortBlogLink">
-          Tüm yazılar için tıklayınız
-        </a>
+        </section>
       </div>
     );
   }

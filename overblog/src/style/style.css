@@ -25,6 +25,10 @@ body {
 
 a {
   text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+a:hover {
+  color: blue;
 }
 .pageDiv {
   margin-top: 80px;
@@ -33,7 +37,7 @@ a {
 /* About Section */
 #aboutImage {
   height: 300px;
-  margin: 5%;
+  padding-right: 5%;
   margin-top: 0;
   float: left;
 }
@@ -58,17 +62,18 @@ a {
   margin-left: 10%;
   margin-right: 10%;
 }
-.aboutSchoolImage {
+#aboutSchoolImage {
   margin-top: 2%;
-  align-items: center;
-  justify-content: center;
+  width: auto;
+  height: auto;
+  max-height: 150px;
   margin-left: 35%;
-  height: 150px;
 }
 .aboutSchoolImage2 {
   margin-left: 45%;
-
-  height: 150px;
+  width: auto;
+  height: auto;
+  max-height: 150px;
 }
 .aboutSchoolTitle {
   text-align: center;
@@ -87,6 +92,7 @@ a {
   /* Position the navbar at the top of the page */
   width: 100%;
   transition: background-color 200ms linear;
+  background-color: transparent;
   color: black;
   height: 80px;
   display: flex;
@@ -94,7 +100,7 @@ a {
   align-items: center;
   font-size: 1rem;
   top: 0;
-
+  z-index: 1;
   /* Fix your navbar by using below two lines of code */
   position: fixed; /* Fix your navbar by using above two lines of code */
   @media screen and (max-width: 960px) {
@@ -139,9 +145,6 @@ a {
   padding: 0 1rem;
   height: 100%;
   cursor: pointer;
-}
-.navLinks:hover {
-  color: blue;
 }
 
 .scrollNav {
@@ -190,7 +193,7 @@ footer #footerCreater:hover {
 /* StartPage section */
 #startPageImage {
   width: 100%;
-  height: 721px;
+  height: auto;
 }
 /* InfoAbout Section */
 .infoAbout {
@@ -199,6 +202,10 @@ footer #footerCreater:hover {
   margin-left: 15%;
   margin-top: 13.2%;
   margin-bottom: 11%;
+}
+.infoAboutTitle {
+  font-weight: bold;
+  font-size: 50px;
 }
 .infoAboutText {
   margin-left: 8%;
@@ -209,34 +216,31 @@ footer #footerCreater:hover {
   border-radius: 100%;
 }
 .infoAboutButton {
+  font-weight: 600;
+  font-size: 20px;
   color: #000000;
-}
-.infoAboutButton:hover {
-  color: #a6bdd7;
 }
 
 /*   */
 
 .shortBlogBox {
-  padding-top: 5%;
+  padding-top: 3%;
+
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  width: auto;
+  height: auto;
 }
 .shortBlogHr {
   margin-left: 15%;
   margin-right: 15%;
 }
-.shortBlogInBox {
-  border: 10px;
-  border-color: #000000;
-}
+
 .shortBlogMainTitle {
   text-align: center;
   font-weight: bold;
-
   font-size: 50px;
 }
 .shortBlogTitle {
@@ -265,21 +269,19 @@ footer #footerCreater:hover {
   font-style: italic;
   color: #000000;
 }
-.shortBlogButton:hover {
-  color: blue;
-}
+
 #shortBlogImage {
-  height: 300px;
+  height: 350px;
   margin-bottom: 5%;
+  margin-left: 0.5%;
+  width: 99%;
 }
 .shortBlogLink {
-  margin-top: 3%;
+  margin-top: 5%;
+  margin-bottom: 4%;
   display: flex;
   justify-content: center;
   color: #000000;
   align-items: center;
   font-size: 35px;
-}
-.shortBlogLink:hover {
-  color: blue;
 }
