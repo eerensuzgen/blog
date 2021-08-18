@@ -96,10 +96,10 @@ export default class ShortBlog extends Component {
                 >
                   <div className="card-img-overlay d-flex flex-column">
                     <div className="card-body">
-                      <small className="card-meta mb-2">Title</small>
+                      <small className="card-meta mb-2">Konu</small>
                       <h4 className="card-title mt-0 ">
                         <a className="text-white" href="*">
-                          Blog 3
+                          Yazı 3
                         </a>
                       </h4>
                       <small>
@@ -127,6 +127,9 @@ export default class ShortBlog extends Component {
               </div>
             </div>
           </div>
+          <a className="shortBlogLink" href="/blog">
+            Tüm yazılar için tıklayın
+          </a>
         </section>
       </div>
     );

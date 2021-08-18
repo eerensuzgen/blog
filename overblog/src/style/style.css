@@ -5,19 +5,11 @@
 *   12-08-2021
 =====================================================================
    TOC:
-   a. About
-   b. Contact
-   c. Footer 
-   d. Header
-   e. HomePage
-    e.1 HomePage About
-    e.2 HomePage Start
-    e.3 HomePage Blog
-   f. Not Found
-   g. Blog
-   h. Blog Detail
+  ***Sections
    
 ===================================================================== */
+
+/* General styles */
 
 body {
   background: white;
@@ -29,6 +21,7 @@ a {
 }
 a:hover {
   color: blue;
+  transition: color 0.6s;
 }
 .pageDiv {
   margin-top: 80px;
@@ -43,6 +36,11 @@ a:hover {
   padding-right: 5%;
   margin-top: 0;
   float: left;
+}
+@media (max-width: 960px) {
+  #aboutImage {
+    margin-bottom: 5%;
+  }
 }
 .aboutTitle {
   text-align: center;
@@ -67,20 +65,24 @@ a:hover {
 }
 #aboutSchoolImage {
   margin-top: 2%;
-  width: auto;
-  height: auto;
-  max-height: 150px;
-  margin-left: 35%;
+  width: 50%;
+  margin-left: 25%;
 }
+
 .aboutSchoolImage2 {
-  margin-left: 45%;
-  width: auto;
-  height: auto;
-  max-height: 150px;
+  margin-left: 34%;
+  width: 35%;
+}
+@media (min-width: 960px) {
+  .aboutSchoolImage2 {
+    margin-left: 42%;
+    width: 15%;
+  }
 }
 .aboutSchoolTitle {
   text-align: center;
 }
+
 .aboutSchoolSpan {
   font-weight: 400;
 }
@@ -89,6 +91,12 @@ a:hover {
   text-align: center;
   padding-bottom: 4%;
 }
+@media (max-width: 960px) {
+  .aboutBioBlock {
+    flex-direction: column;
+  }
+}
+
 /* Navbar section */
 .navbar {
   /* Set the navbar to fixed position */
@@ -205,8 +213,8 @@ footer #footerCreater:hover {
   display: flex;
   flex-direction: row;
   padding-left: 15%;
-  padding-top: 13.2%;
-  padding-bottom: 11%;
+  padding-top: 8.5%;
+  padding-bottom: 8.5%;
 }
 .infoAboutTitle {
   font-weight: bold;
@@ -225,68 +233,72 @@ footer #footerCreater:hover {
   font-size: 20px;
   color: #000000;
 }
+.infoAboutResume {
+  text-indent: 0.5rem;
+  font-size: medium;
+}
 
 /*   */
 
-.shortBlogBox {
-  padding-top: 3%;
-
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  width: auto;
-  height: auto;
-}
-.shortBlogHr {
-  margin-left: 15%;
-  margin-right: 15%;
-}
-
-.shortBlogMainTitle {
-  text-align: center;
-  font-weight: bold;
-  font-size: 50px;
-}
 .shortBlogTitle {
   text-align: center;
   font-weight: bold;
-  padding-bottom: 5%;
+  padding-bottom: 2%;
   font-size: 50px;
 }
-.shortBlogSubtitle {
-  font-style: italic;
-  font-weight: 300;
-  font-size: 20px;
-  text-align: center;
-}
-.shortBlogText {
-  font-family: "Times New Roman", Times, serif;
-  font-weight: 200;
-  font-size: 15px;
-  text-align: center;
-}
-.shortBlogButton {
-  font-weight: bold;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-style: italic;
-  color: #000000;
-}
 
-#shortBlogImage {
-  height: 350px;
-  margin-bottom: 5%;
-  margin-left: 0.5%;
-  width: 99%;
-}
 .shortBlogLink {
+  font-weight: bold;
   margin-top: 5%;
   margin-bottom: 4%;
   display: flex;
   justify-content: center;
   color: #000000;
   align-items: center;
-  font-size: 35px;
+  font-size: 30px;
+}
+
+/* NotFound Section */
+
+#main {
+  transition: all 0.6s;
+  font-family: "Lato", sans-serif;
+  height: max-content;
+  color: #888;
+  height: 65vh;
+  display: table;
+  width: 100%;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.fof {
+  transition: all 0.6s;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.fof h1 {
+  transition: all 0.6s;
+  font-size: 50px;
+  display: inline-block;
+  padding-right: 12px;
+  animation: type 0.5s alternate infinite;
+}
+.fof h2 {
+  transition: all 0.6s;
+  font-size: 75px;
+  display: inline-block;
+  padding-right: 12px;
+}
+
+@keyframes type {
+  from {
+    transition: all 0.6s;
+    box-shadow: inset -3px 0px 0px #888;
+  }
+  to {
+    transition: all 0.6s;
+    box-shadow: inset -3px 0px 0px transparent;
+  }
 }
