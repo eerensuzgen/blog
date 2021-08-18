@@ -7,12 +7,11 @@ export default class NotFound extends Component {
         style={{
           textAlign: "center",
           fontSize: "100px",
-          marginTop: "15%",
+          marginTop: "14.5%",
           marginBottom: "10%",
         }}
       >
-        {" "}
-        404 Not Found ! <br />
+        <div className="pageDiv" /> 404 Not Found ! <br />
       </div>
     );
   }

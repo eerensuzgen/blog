@@ -4,7 +4,6 @@ export default class Footer extends Component {
   render() {
     return (
       <footer>
-        <hr />
         <div className="footerBlock">
           <a
             href="https://www.instagram.com/alpagutkaslan"

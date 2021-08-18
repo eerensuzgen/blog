@@ -6,30 +6,35 @@ export default class Blog extends Component {
       <div>
         {" "}
         <div className="pageDiv" />
-        <section class="light">
-          <div class="container py-2">
-            <div class="h1 text-center text-dark" id="pageHeaderTitle">
+        <section className="light">
+          <div className="container py-2">
+            <div className="h1 text-center text-dark" id="pageHeaderTitle">
               Yazılar
             </div>
-            <article class="postcard light blue">
-              <a class="postcard__img_link" href="#">
+            <article className="postcard light blue">
+              <a className="postcard__img_link" href="*">
                 <img
-                  class="postcard__img"
-                  src="https://picsum.photos/501/500"
-                  alt="Image Title"
+                  className="postcard__img"
+                  // src="https://picsum.photos/501/500"
+                  src="./img/blog1.jpg"
+                  alt="blogImage"
                 />
               </a>
-              <div class="postcard__text t-dark">
-                <h1 class="postcard__title blue">
-                  <a href="#">Podcast Title</a>
+              <div className="postcard__text t-dark">
+                <h1 className="postcard__title blue">
+                  <a href="*">Kamunun Bilgi Alma Hakkı ve Dördüncü Güç</a>
                 </h1>
-                <div class="postcard__subtitle small">
+                <div className="postcard__subtitle small">
                   <time datetime="2020-05-25 12:00:00">
-                    <i class="fas fa-calendar-alt mr-2"></i>Mon, May 25th 2020
+                    <i
+                      className="far fa-calendar-alt mr-2"
+                      style={{ color: "#000", backgroundColor: "#000" }}
+                    ></i>
+                    Ağustos 18, 2021
                   </time>
                 </div>
-                <div class="postcard__bar"></div>
-                <div class="postcard__preview-txt">
+                <div className="postcard__bar"></div>
+                <div className="postcard__preview-txt">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   Eligendi, fugiat asperiores inventore beatae accusamus odit
                   minima enim, commodi quia, doloribus eius! Ducimus nemo
@@ -38,36 +43,29 @@ export default class Blog extends Component {
                   quibusdam, sunt neque nulla unde ipsum dolores nobis enim
                   quidem excepturi, illum quos!
                 </div>
-                <ul class="postcard__tagbox">
-                  <li class="tag__item">
-                    <i class="fas fa-tag mr-2"></i>Podcast
-                  </li>
-                  <li class="tag__item">
-                    <i class="fas fa-clock mr-2"></i>55 mins.
-                  </li>
-                  <li class="tag__item play blue">
-                    <a href="#">
-                      <i class="fas fa-play mr-2"></i>Play Episode
-                    </a>
+                <ul className="postcard__tagbox">
+                  <li className="tag__item">
+                    Devamı için tıklayınız{" "}
+                    <i className="fas fa-arrow-right"></i>
                   </li>
                 </ul>
               </div>
             </article>
-            <article class="postcard light blue">
-              <a class="postcard__img_link" href="#">
+            <article className="postcard light blue">
+              <a class="postcard__img_link" href="*">
                 <img
-                  class="postcard__img"
-                  src="https://picsum.photos/1000/1000"
-                  alt="Image Title"
+                  className="postcard__img"
+                  src="/img/blog2.jpg"
+                  alt="blogImage"
                 />
               </a>
-              <div class="postcard__text t-dark">
-                <h1 class="postcard__title blue">
-                  <a href="#">Podcast Title</a>
+              <div className="postcard__text t-dark">
+                <h1 className="postcard__title blue">
+                  <a href="*">Sözlü İletişim ve Maske: Geçmişe mi Dönüyoruz?</a>
                 </h1>
-                <div class="postcard__subtitle small">
+                <div className="postcard__subtitle small">
                   <time datetime="2020-05-25 12:00:00">
-                    <i class="fas fa-calendar-alt mr-2"></i>Mon, May 25th 2020
+                    <i className="fas fa-calendar-alt mr-2"></i>Ağustos 18, 2021
                   </time>
                 </div>
                 <div class="postcard__bar"></div>
@@ -80,17 +78,9 @@ export default class Blog extends Component {
                   quibusdam, sunt neque nulla unde ipsum dolores nobis enim
                   quidem excepturi, illum quos!
                 </div>
-                <ul class="postcard__tagbox">
-                  <li class="tag__item">
-                    <i class="fas fa-tag mr-2"></i>Podcast
-                  </li>
-                  <li class="tag__item">
-                    <i class="fas fa-clock mr-2"></i>55 mins.
-                  </li>
-                  <li class="tag__item play blue">
-                    <a href="#">
-                      <i class="fas fa-play mr-2"></i>Play Episode
-                    </a>
+                <ul className="postcard__tagbox">
+                  <li className="tag__item">
+                    Devamı için tıklayınız <i className="fas fa-arrow-right" />
                   </li>
                 </ul>
               </div>
