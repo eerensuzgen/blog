@@ -6,46 +6,52 @@ export default class Contact extends Component {
       <div>
         {" "}
         <div className="pageDiv" />
-        <div class="background">
-          <div class="container">
-            <div class="screen">
-              <div class="screen-header">
-                <div class="screen-header-left">
-                  <div class="screen-header-button close"></div>
-                  <div class="screen-header-button maximize"></div>
-                  <div class="screen-header-button minimize"></div>
+        <div className="background">
+          <div className="container">
+            <div className="screen">
+              <div className="screen-header">
+                <div className="screen-header-left">
+                  <div className="screen-header-button close"></div>
+                  <div className="screen-header-button maximize"></div>
+                  <div className="screen-header-button minimize"></div>
                 </div>
-                <div class="screen-header-right">
-                  <div class="screen-header-ellipsis"></div>
-                  <div class="screen-header-ellipsis"></div>
-                  <div class="screen-header-ellipsis"></div>
+                <div className="screen-header-right">
+                  <div className="screen-header-ellipsis"></div>
+                  <div className="screen-header-ellipsis"></div>
+                  <div className="screen-header-ellipsis"></div>
                 </div>
               </div>
-              <div class="screen-body">
-                <div class="screen-body-item left">
-                  <div class="app-title">
+              <div className="screen-body">
+                <div className="screen-body-item left">
+                  <div className="app-title">
                     <span>İletişim</span>
                   </div>
-                  <div class="app-contact">
+                  <div className="app-contact">
                     İletişim e-posta : info@kuskulu.com
                   </div>
                 </div>
-                <div class="screen-body-item">
-                  <div class="app-form">
-                    <div class="app-form-group">
-                      <input class="app-form-control" placeholder="Ad Soyad" />
+                <div className="screen-body-item">
+                  <div className="app-form">
+                    <div className="app-form-group">
+                      <input
+                        className="app-form-control"
+                        placeholder="Ad Soyad"
+                      />
                     </div>
-                    <div class="app-form-group">
-                      <input class="app-form-control" placeholder="E-Posta" />
+                    <div className="app-form-group">
+                      <input
+                        className="app-form-control"
+                        placeholder="E-Posta"
+                      />
                     </div>
-                    <div class="app-form-group">
-                      <input class="app-form-control" placeholder="Konu" />
+                    <div className="app-form-group">
+                      <input className="app-form-control" placeholder="Konu" />
                     </div>
-                    <div class="app-form-group message">
-                      <input class="app-form-control" placeholder="Mesaj" />
+                    <div className="app-form-group message">
+                      <input className="app-form-control" placeholder="Mesaj" />
                     </div>
-                    <div class="app-form-group buttons">
-                      <button class="app-form-button">Gönder</button>
+                    <div className="app-form-group buttons">
+                      <button className="app-form-button">Gönder</button>
                     </div>
                   </div>
                 </div>
