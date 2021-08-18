@@ -4,39 +4,39 @@ export default class ShortBlog extends Component {
   render() {
     return (
       <div className="shortBlog">
-        <section class="wrapper">
+        <section className="wrapper">
           <h1 className="shortBlogTitle">Yazılar</h1>
-          <div class="container">
-            <div class="row">
-              <div class="col-sm-4">
+          <div className="container">
+            <div className="row">
+              <div className="col-sm-4">
                 <div
-                  class="card text-white card-has-bg click-col"
+                  className="card text-white card-has-bg click-col"
                   style={{
                     backgroundImage: `url("https://source.unsplash.com/600x900/?tech,street")`,
                   }}
                 >
-                  <div class="card-img-overlay d-flex flex-column">
-                    <div class="card-body">
-                      <small class="card-meta mb-2">İletişim</small>
-                      <h4 class="card-title mt-0 ">
-                        <a class="text-white" herf="*">
+                  <div className="card-img-overlay d-flex flex-column">
+                    <div className="card-body">
+                      <small className="card-meta mb-2">İletişim</small>
+                      <h4 className="card-title mt-0 ">
+                        <a className="text-white" href="*">
                           Sözlü İletişim ve Maske: Geçmişe mi Dönüyoruz?
                         </a>
                       </h4>
                       <small>
-                        <i class="far fa-clock"></i> Ağustos 17, 2021
+                        <i className="far fa-clock"></i> Ağustos 17, 2021
                       </small>
                     </div>
-                    <div class="card-footer">
-                      <div class="media">
+                    <div className="card-footer">
+                      <div className="media">
                         <img
-                          class="mr-3 rounded-circle"
+                          className="mr-3 rounded-circle"
                           src="./img/pp.jpg"
-                          alt="Generic placeholder image"
+                          alt="ProfilePicture"
                           style={{ maxWidth: "50px" }}
                         />
-                        <div class="media-body">
-                          <h6 class="my-0 text-white d-block">
+                        <div className="media-body">
+                          <h6 className="my-0 text-white d-block">
                             Enes Karaaslan
                           </h6>
                           <small>Gazeteci </small>
@@ -46,38 +46,38 @@ export default class ShortBlog extends Component {
                   </div>
                 </div>
               </div>
-              <div class="col-sm-4">
+              <div className="col-sm-4">
                 <div
-                  class="card text-white card-has-bg click-col"
+                  className="card text-white card-has-bg click-col"
                   style={{
                     backgroundImage: `url("https://source.unsplash.com/600x900/?computer,design")`,
                   }}
                 >
-                  <div class="card-img-overlay d-flex flex-column">
-                    <div class="card-body">
-                      <small class="card-meta mb-2">
+                  <div className="card-img-overlay d-flex flex-column">
+                    <div className="card-body">
+                      <small className="card-meta mb-2">
                         {" "}
                         Kamunun Bilgi Alma Hakkı ve Dördüncü Güç
                       </small>
-                      <h4 class="card-title mt-0 ">
-                        <a class="text-white" herf="#">
+                      <h4 className="card-title mt-0 ">
+                        <a className="text-white" href="*">
                           Araştırmacı Gazetecilik ve Demokrasi
                         </a>
                       </h4>
                       <small>
-                        <i class="far fa-clock"></i> Ağustos 17, 2021
+                        <i className="far fa-clock"></i> Ağustos 17, 2021
                       </small>
                     </div>
-                    <div class="card-footer">
-                      <div class="media">
+                    <div className="card-footer">
+                      <div className="media">
                         <img
-                          class="mr-3 rounded-circle"
+                          className="mr-3 rounded-circle"
                           src="./img/pp.jpg"
-                          alt="Generic placeholder image"
+                          alt="profilePicture"
                           style={{ maxWidth: "50px" }}
                         />
-                        <div class="media-body">
-                          <h6 class="my-0 text-white d-block">
+                        <div className="media-body">
+                          <h6 className="my-0 text-white d-block">
                             Enes Karaaslan
                           </h6>
                           <small>Gazeteci</small>
@@ -87,35 +87,35 @@ export default class ShortBlog extends Component {
                   </div>
                 </div>
               </div>
-              <div class="col-sm-4">
+              <div className="col-sm-4">
                 <div
-                  class="card text-white card-has-bg click-col"
+                  className="card text-white card-has-bg click-col"
                   style={{
                     backgroundImage: `url("https://source.unsplash.com/600x900/?tree,nature")`,
                   }}
                 >
-                  <div class="card-img-overlay d-flex flex-column">
-                    <div class="card-body">
-                      <small class="card-meta mb-2">Title</small>
-                      <h4 class="card-title mt-0 ">
-                        <a class="text-white" herf="#">
+                  <div className="card-img-overlay d-flex flex-column">
+                    <div className="card-body">
+                      <small className="card-meta mb-2">Title</small>
+                      <h4 className="card-title mt-0 ">
+                        <a className="text-white" href="*">
                           Blog 3
                         </a>
                       </h4>
                       <small>
-                        <i class="far fa-clock"></i> Çok Yakında
+                        <i className="far fa-clock"></i> Çok Yakında
                       </small>
                     </div>
-                    <div class="card-footer">
-                      <div class="media">
+                    <div className="card-footer">
+                      <div className="media">
                         <img
-                          class="mr-3 rounded-circle"
+                          className="mr-3 rounded-circle"
                           src="./img/pp.jpg"
-                          alt="Generic placeholder image"
+                          alt="ProfilePicture"
                           style={{ maxWidth: "50px" }}
                         />
-                        <div class="media-body">
-                          <h6 class="my-0 text-white d-block">
+                        <div className="media-body">
+                          <h6 className="my-0 text-white d-block">
                             Enes Karaaslan
                           </h6>
                           <small>Gazeteci</small>
