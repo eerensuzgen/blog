@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import BlogDetail from "./BlogDetail";
 
 export default class Blog extends Component {
   render() {
@@ -12,7 +13,7 @@ export default class Blog extends Component {
               Yazılar
             </div>
             <article className="postcard light blue">
-              <a className="postcard__img_link" href="*">
+              <a className="postcard__img_link" href="/blogDetail">
                 <img
                   className="postcard__img"
                   // src="https://picsum.photos/501/500"
@@ -22,7 +23,9 @@ export default class Blog extends Component {
               </a>
               <div className="postcard__text t-dark">
                 <h1 className="postcard__title blue">
-                  <a href="*">Kamunun Bilgi Alma Hakkı ve Dördüncü Güç</a>
+                  <a href="/blogDetail">
+                    Kamunun Bilgi Alma Hakkı ve Dördüncü Güç
+                  </a>
                 </h1>
                 <div className="postcard__subtitle small">
                   <time datetime="2020-05-25 12:00:00">
@@ -44,15 +47,17 @@ export default class Blog extends Component {
                   quidem excepturi, illum quos!
                 </div>
                 <ul className="postcard__tagbox">
-                  <li className="tag__item">
-                    Devamı için tıklayınız{" "}
-                    <i className="fas fa-arrow-right"></i>
-                  </li>
+                  <a href="/blogDetail">
+                    <li className="tag__item">
+                      Devamı için tıklayınız{" "}
+                      {/* <i className="fas fa-arrow-right" /> */}
+                    </li>
+                  </a>
                 </ul>
               </div>
             </article>
             <article className="postcard light blue">
-              <a class="postcard__img_link" href="*">
+              <a class="postcard__img_link" href="/blogDetail">
                 <img
                   className="postcard__img"
                   src="/img/blog2.jpg"
@@ -61,7 +66,9 @@ export default class Blog extends Component {
               </a>
               <div className="postcard__text t-dark">
                 <h1 className="postcard__title blue">
-                  <a href="*">Sözlü İletişim ve Maske: Geçmişe mi Dönüyoruz?</a>
+                  <a href="/blogDetail">
+                    Sözlü İletişim ve Maske: Geçmişe mi Dönüyoruz?
+                  </a>
                 </h1>
                 <div className="postcard__subtitle small">
                   <time datetime="2020-05-25 12:00:00">
@@ -79,9 +86,12 @@ export default class Blog extends Component {
                   quidem excepturi, illum quos!
                 </div>
                 <ul className="postcard__tagbox">
-                  <li className="tag__item">
-                    Devamı için tıklayınız <i className="fas fa-arrow-right" />
-                  </li>
+                  <a href="/blogDetail">
+                    <li className="tag__item">
+                      Devamı için tıklayınız{" "}
+                      {/* <i className="fas fa-arrow-right" /> */}
+                    </li>
+                  </a>
                 </ul>
               </div>
             </article>

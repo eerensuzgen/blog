@@ -82,6 +82,7 @@
   justify-content: center;
 }
 .postcard .postcard__tagbox .tag__item {
+  cursor: pointer;
   display: inline-block;
   background: rgba(83, 83, 83, 0.4);
   border-radius: 3px;
@@ -92,6 +93,7 @@
   transition: background-color 0.3s;
 }
 .postcard .postcard__tagbox .tag__item:hover {
+  cursor: pointer;
   background: rgba(83, 83, 83, 0.8);
 }
 .postcard:before {

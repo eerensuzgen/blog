@@ -8,6 +8,7 @@ import About from "./Components/About";
 import Blog from "./Components/Blog";
 import Contact from "./Components/Contact";
 import NotFound from "./Components/NotFound";
+import BlogDetail from "./Components/BlogDetail";
 
 class App extends Component {
   componentDidMount() {}
@@ -19,6 +20,7 @@ class App extends Component {
           <Route exact path="/" component={HomePage} />
           <Route path="/about" component={About} />
           <Route path="/blog" component={Blog} />
+          <Route path="/blogDetail" component={BlogDetail} />
           <Route path="/contact" component={Contact} />
           <Route path="*" component={NotFound} />
         </Switch>
