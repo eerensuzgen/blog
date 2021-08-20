@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import BlogDetail from "./BlogDetail";
 
 export default class ShortBlog extends Component {
   render() {
@@ -19,7 +20,7 @@ export default class ShortBlog extends Component {
                     <div className="card-body">
                       <small className="card-meta mb-2">İletişim</small>
                       <h4 className="card-title mt-0 ">
-                        <a className="text-white" href="*">
+                        <a className="text-white" href="/blogDetail">
                           Sözlü İletişim ve Maske: Geçmişe mi Dönüyoruz?
                         </a>
                       </h4>
@@ -60,7 +61,7 @@ export default class ShortBlog extends Component {
                         Kamunun Bilgi Alma Hakkı ve Dördüncü Güç
                       </small>
                       <h4 className="card-title mt-0 ">
-                        <a className="text-white" href="*">
+                        <a className="text-white" href="/blogDetail">
                           Araştırmacı Gazetecilik ve Demokrasi
                         </a>
                       </h4>
@@ -98,7 +99,7 @@ export default class ShortBlog extends Component {
                     <div className="card-body">
                       <small className="card-meta mb-2">Konu</small>
                       <h4 className="card-title mt-0 ">
-                        <a className="text-white" href="*">
+                        <a className="text-white" href="/blogDetail">
                           Yazı 3
                         </a>
                       </h4>

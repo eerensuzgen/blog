@@ -116,8 +116,10 @@ a:hover {
   position: fixed; /* Fix your navbar by using above two lines of code */
   @media screen and (max-width: 960px) {
     transition: 0.8s all ease;
+    top: 0;
   }
 }
+
 .navContainer {
   display: flex;
   justify-content: space-between;
@@ -301,4 +303,13 @@ footer #footerCreater:hover {
     transition: all 0.6s;
     box-shadow: inset -3px 0px 0px transparent;
   }
+}
+
+/* Blog Detail */
+
+.blogDetail {
+  text-align: center;
+  font-size: 50px;
+  padding: 15%;
+  background: #f3f5f7;
 }
