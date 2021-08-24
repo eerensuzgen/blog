@@ -84,7 +84,6 @@
 .postcard .postcard__tagbox .tag__item {
   cursor: pointer;
   display: inline-block;
-  background: rgba(83, 83, 83, 0.4);
   border-radius: 3px;
   padding: 2.5px 10px;
   margin: 0 5px 5px 0;
@@ -94,7 +93,8 @@
 }
 .postcard .postcard__tagbox .tag__item:hover {
   cursor: pointer;
-  background: rgba(83, 83, 83, 0.8);
+  transition: all 0.6s;
+  font-size: 15px;
 }
 .postcard:before {
   content: "";
@@ -184,12 +184,12 @@
   color: #0076bd;
 }
 .blue .postcard__bar {
-  background-color: blue;
+  background-color: #e50914;
 }
 .blue::before {
   background-image: linear-gradient(
     -30deg,
-    rgba(0, 118, 189, 0.1),
+    rgba(0, 118, 189, 0),
     transparent 50%
   );
 }

@@ -1,136 +1,132 @@
 import React, { Component } from "react";
-import BlogDetail from "./BlogDetail";
 
 export default class ShortBlog extends Component {
   render() {
     return (
       <div className="shortBlog">
-        <section className="wrapper">
-          <h1 className="shortBlogTitle">Yazılar</h1>
-          <div className="container">
-            <div className="row">
-              <div className="col-sm-4">
-                <div
-                  className="card text-white card-has-bg click-col"
-                  style={{
-                    backgroundImage: `url("https://source.unsplash.com/600x900/?tech,street")`,
-                  }}
-                >
-                  <div className="card-img-overlay d-flex flex-column">
-                    <div className="card-body">
-                      <small className="card-meta mb-2">İletişim</small>
-                      <h4 className="card-title mt-0 ">
-                        <a className="text-white" href="/blogDetail">
-                          Sözlü İletişim ve Maske: Geçmişe mi Dönüyoruz?
-                        </a>
-                      </h4>
-                      <small>
-                        <i className="far fa-clock"></i> Ağustos 17, 2021
-                      </small>
-                    </div>
-                    <div className="card-footer">
-                      <div className="media">
-                        <img
-                          className="mr-3 rounded-circle"
-                          src="./img/pp.jpg"
-                          alt="ProfilePicture"
-                          style={{ maxWidth: "50px" }}
-                        />
-                        <div className="media-body">
-                          <h6 className="my-0 text-white d-block">
-                            Enes Karaaslan
-                          </h6>
-                          <small>Gazeteci </small>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="col-sm-4">
-                <div
-                  className="card text-white card-has-bg click-col"
-                  style={{
-                    backgroundImage: `url("https://source.unsplash.com/600x900/?computer,design")`,
-                  }}
-                >
-                  <div className="card-img-overlay d-flex flex-column">
-                    <div className="card-body">
-                      <small className="card-meta mb-2">
-                        {" "}
-                        Kamunun Bilgi Alma Hakkı ve Dördüncü Güç
-                      </small>
-                      <h4 className="card-title mt-0 ">
-                        <a className="text-white" href="/blogDetail">
-                          Araştırmacı Gazetecilik ve Demokrasi
-                        </a>
-                      </h4>
-                      <small>
-                        <i className="far fa-clock"></i> Ağustos 17, 2021
-                      </small>
-                    </div>
-                    <div className="card-footer">
-                      <div className="media">
-                        <img
-                          className="mr-3 rounded-circle"
-                          src="./img/pp.jpg"
-                          alt="profilePicture"
-                          style={{ maxWidth: "50px" }}
-                        />
-                        <div className="media-body">
-                          <h6 className="my-0 text-white d-block">
-                            Enes Karaaslan
-                          </h6>
-                          <small>Gazeteci</small>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="col-sm-4">
-                <div
-                  className="card text-white card-has-bg click-col"
-                  style={{
-                    backgroundImage: `url("https://source.unsplash.com/600x900/?tree,nature")`,
-                  }}
-                >
-                  <div className="card-img-overlay d-flex flex-column">
-                    <div className="card-body">
-                      <small className="card-meta mb-2">Konu</small>
-                      <h4 className="card-title mt-0 ">
-                        <a className="text-white" href="/blogDetail">
-                          Yazı 3
-                        </a>
-                      </h4>
-                      <small>
-                        <i className="far fa-clock"></i> Çok Yakında
-                      </small>
-                    </div>
-                    <div className="card-footer">
-                      <div className="media">
-                        <img
-                          className="mr-3 rounded-circle"
-                          src="./img/pp.jpg"
-                          alt="ProfilePicture"
-                          style={{ maxWidth: "50px" }}
-                        />
-                        <div className="media-body">
-                          <h6 className="my-0 text-white d-block">
-                            Enes Karaaslan
-                          </h6>
-                          <small>Gazeteci</small>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+        <section className="light">
+          <div className="container py-2">
+            <div className="h1 text-center text-dark" id="pageHeaderTitle">
+              Yazılar
             </div>
+            <article className="postcard light blue">
+              <a className="postcard__img_link" href="/blogDetail">
+                <img
+                  className="postcard__img"
+                  // src="https://picsum.photos/501/500"
+                  src="./img/blog1.jpg"
+                  alt="blogImage"
+                />
+              </a>
+              <div className="postcard__text t-dark">
+                <h1 className="postcard__title blue">
+                  <a href="/blogDetail">
+                    Kamunun Bilgi Alma Hakkı ve Dördüncü Güç
+                  </a>
+                </h1>
+                <div className="postcard__subtitle small">
+                  <time>
+                    <small>
+                      <em>Ağustos 18, 2021</em>
+                    </small>
+                  </time>
+                </div>
+                <div className="postcard__bar"></div>
+                <div className="postcard__preview-txt">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Eligendi, fugiat asperiores inventore beatae accusamus odit
+                  minima enim, commodi quia, doloribus eius! Ducimus nemo
+                  accusantium maiores velit corrupti tempora reiciendis
+                  molestiae repellat vero. Eveniet ipsam adipisci illo iusto
+                  quibusdam, sunt neque nulla unde ipsum dolores nobis enim
+                  quidem excepturi, illum quos!
+                </div>
+                <ul className="postcard__tagbox">
+                  <a href="/blogDetail">
+                    <li className="tag__item">Devamı için tıklayınız </li>
+                  </a>
+                </ul>
+              </div>
+            </article>
+            <article className="postcard light blue">
+              <a class="postcard__img_link" href="/blogDetail">
+                <img
+                  className="postcard__img"
+                  src="/img/blog2.jpg"
+                  alt="blogImage"
+                />
+              </a>
+              <div className="postcard__text t-dark">
+                <h1 className="postcard__title blue">
+                  <a href="/blogDetail">
+                    Sözlü İletişim ve Maske: Geçmişe mi Dönüyoruz?
+                  </a>
+                </h1>
+                <div className="postcard__subtitle small">
+                  <time datetime="2020-05-25 12:00:00">
+                    <i className="fas fa-calendar-alt mr-2"></i>
+                    <small>
+                      <em>Ağustos 18, 2021</em>
+                    </small>
+                  </time>
+                </div>
+                <div class="postcard__bar"></div>
+                <div class="postcard__preview-txt">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Eligendi, fugiat asperiores inventore beatae accusamus odit
+                  minima enim, commodi quia, doloribus eius! Ducimus nemo
+                  accusantium maiores velit corrupti tempora reiciendis
+                  molestiae repellat vero. Eveniet ipsam adipisci illo iusto
+                  quibusdam, sunt neque nulla unde ipsum dolores nobis enim
+                  quidem excepturi, illum quos!
+                </div>
+                <ul className="postcard__tagbox">
+                  <a href="/blogDetail">
+                    <li className="tag__item">
+                      Devamı için tıklayınız{" "}
+                      {/* <i className="fas fa-arrow-right" /> */}
+                    </li>
+                  </a>
+                </ul>
+              </div>
+            </article>
+            <article className="postcard light blue">
+              <a className="postcard__img_link" href="/blogDetail">
+                <img
+                  className="postcard__img"
+                  // src="https://picsum.photos/501/500"
+                  src="./img/blog1.jpg"
+                  alt="blogImage"
+                />
+              </a>
+              <div className="postcard__text t-dark">
+                <h1 className="postcard__title blue">
+                  <a href="/blogDetail">Çok Yakında...</a>
+                </h1>
+                <div className="postcard__subtitle small">
+                  <time datetime="2020-05-25 12:00:00">
+                    <i
+                      className="far fa-calendar-alt mr-2"
+                      style={{ color: "#000", backgroundColor: "#000" }}
+                    ></i>
+                    <small>
+                      <em>Çok Yakında</em>
+                    </small>
+                  </time>
+                </div>
+                <div className="postcard__bar"></div>
+                <div className="postcard__preview-txt">Çok yakında</div>
+                <ul className="postcard__tagbox">
+                  <a href="/blogDetail">
+                    <li className="tag__item">
+                      Devamı için tıklayınız{" "}
+                      {/* <i className="fas fa-arrow-right" /> */}
+                    </li>
+                  </a>
+                </ul>
+              </div>
+            </article>
           </div>
-          <a className="shortBlogLink" href="/blog">
-            Tüm yazılar için tıklayın
-          </a>
         </section>
       </div>
     );
