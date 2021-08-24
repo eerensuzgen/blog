@@ -4,11 +4,17 @@ export default class StartPage extends Component {
   render() {
     return (
       <div>
-        <img
-          alt="startPage"
-          src="./img/background.jpg"
-          id="startPageImage"
-        ></img>
+        <div class="startpage">
+          <div class="startpageShadows">
+            <span>K</span>
+            <span>U</span>
+            <span>Ş</span>
+            <span>K</span>
+            <span>U</span>
+            <span>L</span>
+            <span>U</span>
+          </div>
+        </div>
       </div>
     );
   }

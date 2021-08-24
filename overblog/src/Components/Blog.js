@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import BlogDetail from "./BlogDetail";
 
 export default class Blog extends Component {
   render() {
@@ -29,11 +28,9 @@ export default class Blog extends Component {
                 </h1>
                 <div className="postcard__subtitle small">
                   <time datetime="2020-05-25 12:00:00">
-                    <i
-                      className="far fa-calendar-alt mr-2"
-                      style={{ color: "#000", backgroundColor: "#000" }}
-                    ></i>
-                    Ağustos 18, 2021
+                    <small>
+                      <em>Ağustos 18, 2021</em>
+                    </small>
                   </time>
                 </div>
                 <div className="postcard__bar"></div>
@@ -48,10 +45,7 @@ export default class Blog extends Component {
                 </div>
                 <ul className="postcard__tagbox">
                   <a href="/blogDetail">
-                    <li className="tag__item">
-                      Devamı için tıklayınız{" "}
-                      {/* <i className="fas fa-arrow-right" /> */}
-                    </li>
+                    <li className="tag__item">Devamı için tıklayınız</li>
                   </a>
                 </ul>
               </div>
@@ -72,7 +66,9 @@ export default class Blog extends Component {
                 </h1>
                 <div className="postcard__subtitle small">
                   <time datetime="2020-05-25 12:00:00">
-                    <i className="fas fa-calendar-alt mr-2"></i>Ağustos 18, 2021
+                    <small>
+                      <em>Ağustos 18, 2021</em>
+                    </small>
                   </time>
                 </div>
                 <div class="postcard__bar"></div>
@@ -87,10 +83,7 @@ export default class Blog extends Component {
                 </div>
                 <ul className="postcard__tagbox">
                   <a href="/blogDetail">
-                    <li className="tag__item">
-                      Devamı için tıklayınız{" "}
-                      {/* <i className="fas fa-arrow-right" /> */}
-                    </li>
+                    <li className="tag__item">Devamı için tıklayınız</li>
                   </a>
                 </ul>
               </div>

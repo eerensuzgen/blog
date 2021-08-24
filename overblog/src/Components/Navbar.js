@@ -24,13 +24,12 @@ export default function Navbar() {
       <div>
         <nav id="navigation" className="navbar">
           <div className="navContainer">
-            <a href="/">
-              <img src="./img/logo.png" alt="logo" id="navLogo" height="81%" />
-            </a>
+            <img src="./img/logoRed.png" alt="logo" id="navLogo" height="81%" />
+
             <ul className="navMenu">
               <li className="navItem">
                 <a href="/" className="navLinks">
-                  Ana Sayfa{" "}
+                  Ana Sayfa
                 </a>
                 {/* <Link to="/" className="navLinks">
             Anasayfa
