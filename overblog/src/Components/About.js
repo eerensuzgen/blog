@@ -48,7 +48,7 @@ export default class About extends Component {
         </div>
         <br />
         <div>
-          <h1 className="aboutTitle">Eğitim</h1>
+          <h1 id="aboutSchoolTitle">Eğitim</h1>
           <hr className="aboutHr" />
           <img src="./img/aü.jpg" alt="schoolImage" id="aboutSchoolImage" />
           <h1 className="aboutSchoolTitle">

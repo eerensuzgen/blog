@@ -1,70 +1,54 @@
-import React from "react";
-// import { Link } from "react-router-dom";
+import React, { useState } from "react";
 
-export default function Navbar() {
-  const url = "http://localhost:3000/";
+const NavBar = (props) => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggle = () => setIsOpen(!isOpen);
+  const url = "http://kuskulu.mkonuk.com/";
   window.addEventListener("DOMContentLoaded", NavController);
   function NavController() {
     if (document.URL === url) {
       window.addEventListener("scroll", navScroll);
     } else {
-      document.getElementById("navigation").classList.add("scrollNav");
+      document.getElementById("navigation").classList.add("navScroll");
     }
   }
 
   function navScroll() {
-    if (window.scrollY >= 75) {
-      document.getElementById("navigation").classList.add("scrollNav");
+    if (window.scrollY >= 100) {
+      document.getElementById("navigation").classList.add("navScroll");
     } else {
-      document.getElementById("navigation").classList.remove("scrollNav");
+      document.getElementById("navigation").classList.remove("navScroll");
     }
   }
   return (
-    <header>
-      <div>
-        <nav id="navigation" className="navbar">
-          <div className="navContainer">
-            <img src="./img/logoRed.png" alt="logo" id="navLogo" height="81%" />
-
-            <ul className="navMenu">
-              <li className="navItem">
-                <a href="/" className="navLinks">
-                  Ana Sayfa
-                </a>
-                {/* <Link to="/" className="navLinks">
-            Anasayfa
-          </Link> */}
-              </li>
-              <li className="navItem">
-                <a href="/about" className="navLinks">
-                  Hakkımda
-                </a>
-                {/* <Link to="/about" className="navLinks">
-            Hakkımda
-          </Link> */}
-              </li>
-              <li className="navItem">
-                <a href="/blog" className="navLinks">
-                  {" "}
-                  Yazılar
-                </a>
-                {/* <Link to="/blog" className="navLinks">
-            Yazılar
-          </Link> */}
-              </li>
-              <li className="navItem">
-                <a href="/contact" className="navLinks">
-                  {" "}
-                  İletişim
-                </a>
-                {/* <Link to="/contact" className="navLinks">
-            İletişim
-          </Link> */}
-              </li>
-            </ul>
+    <div>
+      <div class="bs-example container-fluid navigationBar ">
+        <nav
+          class="navbar navbar-expand-md navbar-light bg-light"
+          id="navigation"
+        >
+          <img src="./img/logoRed.png" width="17.5%" id="navigationBarLogo" />
+          <button
+            type="button"
+            class="navbar-toggler"
+            data-toggle="collapse"
+            data-target="#navbarCollapse"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav d-flex ml-auto">
+              <a href="/">Anasayfa</a>
+              <a href="/about">Hakkımda</a>
+              <a href="/blog">Yazılar</a>
+              <a href="/contact">İletişim</a>
+            </div>
           </div>
         </nav>
       </div>
-    </header>
+    </div>
   );
-}
+};
+
+export default NavBar;

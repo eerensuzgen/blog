@@ -21,7 +21,8 @@ a {
 }
 a:hover {
   color: #e50914;
-  transition: color 0.3s;
+  text-decoration: none;
+  transition: color 0.2s;
 }
 .pageDiv {
   margin-top: 80px;
@@ -37,16 +38,17 @@ a:hover {
   margin-top: 0;
   float: left;
 }
-@media (max-width: 960px) {
-  #aboutImage {
-    margin-bottom: 5%;
-  }
-}
 .aboutTitle {
   text-align: center;
   font-size: 50px;
   font-weight: bold;
   padding: 1%;
+}
+#aboutSchoolTitle {
+  text-align: center;
+  font-weight: bold;
+  font-size: 50px;
+  margin-top: 4%;
 }
 .aboutBioBlock {
   display: flex;
@@ -64,129 +66,71 @@ a:hover {
   margin-right: 10%;
 }
 #aboutSchoolImage {
-  margin-top: 2%;
-  width: 50%;
-  margin-left: 25%;
-}
-
-.aboutSchoolImage2 {
-  margin-left: 34%;
+  margin-top: 5%;
+  display: flex;
+  margin: auto;
   width: 35%;
 }
-@media (min-width: 960px) {
-  .aboutSchoolImage2 {
-    margin-left: 42%;
-    width: 15%;
-  }
+.aboutSchoolImage2 {
+  display: flex;
+  margin: auto;
+  width: 12%;
 }
 .aboutSchoolTitle {
   text-align: center;
+  font-size: 36px;
 }
 
 .aboutSchoolSpan {
-  font-weight: 400;
+  font-weight: 200;
 }
 .aboutSchoolDate {
-  font-weight: 600;
+  font-weight: 400;
   text-align: center;
   padding-bottom: 4%;
 }
 @media (max-width: 960px) {
+  #aboutImage {
+    margin-bottom: 5%;
+  }
+  #aboutSchoolImage {
+    width: 80%;
+  }
+  .aboutSchoolImage2 {
+    width: 35%;
+  }
+  .aboutSchoolDate {
+    margin-bottom: 4vh;
+  }
   .aboutBioBlock {
     flex-direction: column;
   }
 }
 
 /* Navbar section */
-.navbar {
-  /* Set the navbar to fixed position */
-  /* Position the navbar at the top of the page */
-  width: 100%;
-  transition: background-color 200ms linear;
-  background-color: transparent;
-  color: black;
-  height: 80px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 1rem;
+
+.navigationBar {
+  position: fixed;
+  z-index: 2;
+  background-color: #f3f5f7;
   top: 0;
-  z-index: 1;
-  /* Fix your navbar by using below two lines of code */
-  position: fixed; /* Fix your navbar by using above two lines of code */
-  @media screen and (max-width: 960px) {
-    transition: 0.8s all ease;
-    top: 0;
-  }
 }
-
-.navContainer {
-  display: flex;
-  justify-content: space-between;
-  height: 80px;
-  width: 100%;
-  max-width: 1100px;
-}
-.navLogo {
-  cursor: pointer;
-  font-size: 1.5rem;
-  display: flex;
-  align-items: center;
-  margin-left: 24px;
-  font-weight: bold;
+.navigationBar a {
+  font-family: "Oswald", sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
   text-decoration: none;
-}
-.navMenu {
-  display: flex;
-  align-items: center;
-  list-style: none;
-  text-align: center;
-  margin-right: -22px;
-
-  @media screen and (max-width: 960px) {
-    display: none;
-  }
-}
-.navItem {
-  height: 80px;
-}
-.navLinks {
   color: #e50914;
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-  padding: 0 1rem;
-  height: 100%;
-  cursor: pointer;
+  margin: 0 8px;
+  font-size: 16px;
+  letter-spacing: 1px;
 }
 
-.navLinks:hover:after {
-  width: 100%;
-  left: 0;
-  background: rgb(168, 168, 168);
-}
 .scrollNav {
   background-color: #f3f5f7;
   color: "#ffffff";
 }
-nav {
-  width: 100%;
-  position: fixed;
-  top: 50px;
-  text-align: center;
-}
-nav a {
-  font-family: "Oswald", sans-serif;
-  font-weight: 500;
-  text-transform: uppercase;
-  text-decoration: none;
-  color: #16151b;
-  margin: 0 15px;
-  font-size: 16px;
-  letter-spacing: 1px;
-  position: relative;
-  display: inline-block;
-}
+
 nav a:before {
   content: "";
   position: absolute;
@@ -196,9 +140,29 @@ nav a:before {
   top: 47%;
   animation: out 0.2s cubic-bezier(1, 0, 0.58, 0.97) 1 both;
 }
+
 nav a:hover:before {
   animation: in 0.2s cubic-bezier(1, 0, 0.58, 0.97) 1 both;
 }
+@media (max-width: 960px) and (min-width: 750px) {
+  #navigationBarLogo {
+    width: 30%;
+  }
+}
+@media (max-width: 750px) {
+  .navigationBar {
+    background-color: #f3f5f7;
+    color: #e50914;
+  }
+  .navigationBar a {
+    text-align: center;
+    margin: 12px 8px 8px;
+  }
+  #navigationBarLogo {
+    width: 50%;
+  }
+}
+
 @keyframes in {
   0% {
     width: 0;
@@ -234,19 +198,19 @@ nav a:hover:before {
   }
 }
 nav a:nth-child(1) {
-  animation: show 0.2s 1.1s ease 1 both;
+  animation: show 0.2s 0.5s ease 1 both;
 }
 nav a:nth-child(2) {
-  animation: show 0.2s 1.2s ease 1 both;
+  animation: show 0.2s 0.6s ease 1 both;
 }
 nav a:nth-child(3) {
-  animation: show 0.2s 1.3s ease 1 both;
+  animation: show 0.2s 0.7s ease 1 both;
 }
 nav a:nth-child(4) {
-  animation: show 0.2s 1.4s ease 1 both;
+  animation: show 0.2s 0.8s ease 1 both;
 }
 nav a:nth-child(5) {
-  animation: show 0.2s 1.5s ease 1 both;
+  animation: show 0.2s 0.9s ease 1 both;
 }
 
 /* Footer Section */
@@ -287,11 +251,7 @@ footer #footerCreater {
 footer #footerCreater:hover {
   color: #e50914;
 }
-/* StartPage section */
-#startPageImage {
-  width: 100%;
-  height: auto;
-}
+
 /* InfoAbout Section */
 
 .infoAbout {
@@ -301,6 +261,8 @@ footer #footerCreater:hover {
   padding-left: 15%;
   padding-top: 8.5%;
   padding-bottom: 8.5%;
+  justify-content: center;
+  align-items: center;
 }
 .infoAboutTitle {
   font-weight: bold;
@@ -320,7 +282,6 @@ footer #footerCreater:hover {
   color: #000000;
 }
 .infoAboutResume {
-  text-indent: 0.5rem;
   font-size: medium;
 }
 @media (max-width: 960px) {
@@ -337,7 +298,7 @@ footer #footerCreater:hover {
   #pp {
     display: flex;
     margin: auto;
-
+    margin-bottom: 5%;
     width: 50%;
     border-radius: 100%;
   }
@@ -430,7 +391,7 @@ footer #footerCreater:hover {
 }
 .startpage {
   background-color: #f3f5f7;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   display: flex;
   align-items: center;
@@ -448,6 +409,7 @@ footer #footerCreater:hover {
   font-size: 150px;
   transition: all 0.25s ease-out;
 }
+
 @media (max-width: 960px) {
   .startpage {
     background-color: #f3f5f7;
