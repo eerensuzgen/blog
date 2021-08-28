@@ -4,8 +4,8 @@ export default class StartPage extends Component {
   render() {
     return (
       <div>
-        <div class="startpage">
-          <div class="startpageShadows">
+        <div className="startpage">
+          <div className="startpageShadows">
             <span>K</span>
             <span>U</span>
             <span>Ş</span>

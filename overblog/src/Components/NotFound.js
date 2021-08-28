@@ -6,7 +6,7 @@ export default class NotFound extends Component {
       <div>
         <div className="pageDiv" />
         <div id="main">
-          <div class="fof">
+          <div className="fof">
             <h2>404</h2>
             <br />
             <h1> Not Found !</h1>

@@ -93,7 +93,7 @@
 }
 .postcard .postcard__tagbox .tag__item:hover {
   cursor: pointer;
-  transition: all 0.6s;
+  transition: all 0.3s;
   font-size: 15px;
 }
 .postcard:before {

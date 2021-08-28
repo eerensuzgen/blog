@@ -27,7 +27,7 @@ export default class Blog extends Component {
                   </a>
                 </h1>
                 <div className="postcard__subtitle small">
-                  <time datetime="2020-05-25 12:00:00">
+                  <time dateTime="2020-05-25 12:00:00">
                     <small>
                       <em>Ağustos 18, 2021</em>
                     </small>
@@ -51,7 +51,7 @@ export default class Blog extends Component {
               </div>
             </article>
             <article className="postcard light blue">
-              <a class="postcard__img_link" href="/blogDetail">
+              <a className="postcard__img_link" href="/blogDetail">
                 <img
                   className="postcard__img"
                   src="/img/blog2.jpg"
@@ -65,14 +65,14 @@ export default class Blog extends Component {
                   </a>
                 </h1>
                 <div className="postcard__subtitle small">
-                  <time datetime="2020-05-25 12:00:00">
+                  <time dateTime="2020-05-25 12:00:00">
                     <small>
                       <em>Ağustos 18, 2021</em>
                     </small>
                   </time>
                 </div>
-                <div class="postcard__bar"></div>
-                <div class="postcard__preview-txt">
+                <div className="postcard__bar"></div>
+                <div className="postcard__preview-txt">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   Eligendi, fugiat asperiores inventore beatae accusamus odit
                   minima enim, commodi quia, doloribus eius! Ducimus nemo
