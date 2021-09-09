@@ -9,6 +9,10 @@ import Blog from "./Components/Blog";
 import Contact from "./Components/Contact";
 import NotFound from "./Components/NotFound";
 import BlogDetail from "./Components/BlogDetail";
+import AdminLogin from "./Components/Admin/AdminLogin";
+import AdminDashboard from "./Components/Admin/AdminDashboard";
+import AdminBlog from "./Components/Admin/AdminBlog";
+import AdminBlogNew from "./Components/Admin/AdminBlogNew";
 
 class App extends Component {
   componentDidMount() {}
@@ -22,6 +26,10 @@ class App extends Component {
           <Route path="/blog" component={Blog} />
           <Route path="/blogDetail" component={BlogDetail} />
           <Route path="/contact" component={Contact} />
+          <Route path="/admin" component={AdminLogin} />
+          <Route path="/adminDashboard" component={AdminDashboard} />
+          <Route path="/adminBlog" component={AdminBlog} />
+          <Route path="/adminBlogNew" component={AdminBlogNew} />
           <Route path="*" component={NotFound} />
         </Switch>
         <Footer />
