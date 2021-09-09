@@ -1,12 +1,12 @@
 import React, { Component } from "react";
 import axios from "axios";
+import ReactHtmlParser from "react-html-parser";
 
 const Blogs = (props) => (
   <article className="postcard light blue">
     <a className="postcard__img_link" href="/blogDetail">
       <img
         className="postcard__img"
-        // src="https://picsum.photos/501/500"
         src={props.blogs.blog_image}
         alt="blogImage"
       />
@@ -22,10 +22,10 @@ const Blogs = (props) => (
           </small>
         </time>
       </div>
-      <div className="postcard__bar"></div>
+      <div className="postcard__bar"></div>{" "}
       <div className="postcard__preview-txt">{props.blogs.shortCut}</div>
       <ul className="postcard__tagbox">
-        <a href="/blogDetail">
+        <a href={"/blogDetail/" + props.blogs._id}>
           <li className="tag__item">Devamı için tıklayınız</li>
         </a>
       </ul>

@@ -13,6 +13,7 @@ import AdminLogin from "./Components/Admin/AdminLogin";
 import AdminDashboard from "./Components/Admin/AdminDashboard";
 import AdminBlog from "./Components/Admin/AdminBlog";
 import AdminBlogNew from "./Components/Admin/AdminBlogNew";
+import AdminBlogEdit from "./Components/Admin/AdminBlogEdit";
 
 class App extends Component {
   componentDidMount() {}
@@ -30,6 +31,7 @@ class App extends Component {
           <Route path="/adminDashboard" component={AdminDashboard} />
           <Route path="/adminBlog" component={AdminBlog} />
           <Route path="/adminBlogNew" component={AdminBlogNew} />
+          <Route path="/adminBlogEdit" component={AdminBlogEdit} />
           <Route path="*" component={NotFound} />
         </Switch>
         <Footer />
