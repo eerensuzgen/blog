@@ -25,7 +25,7 @@ const Blogs = (props) => (
       <div className="postcard__bar"></div>
       <div className="postcard__preview-txt">{props.blogs.shortCut}</div>
       <ul className="postcard__tagbox">
-        <a href="/blogDetail">
+        <a href={"/blogDetail/" + props.blogs._id}>
           <li className="tag__item">Devamı için tıklayınız</li>
         </a>
       </ul>

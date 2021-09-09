@@ -49,7 +49,7 @@ router.route("/updateBlog/:id").post((req, res) => {
       Blog.subtitle = req.body.subtitle;
       Blog.blog_image = req.body.blog_image;
       Blog.createdAt = req.body.createdAt;
-      Blog.shortCut = req.body.shortcut;
+      Blog.shortCut = req.body.shortCut;
       Blog.blog = req.body.blog;
 
       Blog.save()

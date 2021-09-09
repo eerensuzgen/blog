@@ -23,7 +23,7 @@ export default class AdminNewUsers extends Component {
       subtitle: "",
       createdAt: "",
       blog_image: "",
-      shortcut: "",
+      shortCut: "",
       blog: "",
     };
   }
@@ -37,7 +37,7 @@ export default class AdminNewUsers extends Component {
           subtitle: response.data.subtitle,
           blog_image: response.data.blog_image,
           createdAt: response.data.createdAt,
-          shortcut: response.data.shortcut,
+          shortCut: response.data.shortCut,
           blog: response.data.blog,
         });
       })
@@ -75,7 +75,7 @@ export default class AdminNewUsers extends Component {
   }
   onChangeShortcut(e) {
     this.setState({
-      shortcut: e.target.value,
+      shortCut: e.target.value,
     });
   }
 
@@ -90,7 +90,7 @@ export default class AdminNewUsers extends Component {
       subtitle: document.getElementById("subtitle").value,
       blog_image: document.getElementById("blog_image").value,
       createdAt: String(currentDate),
-      shortcut: document.getElementById("shortcut").value,
+      shortCut: document.getElementById("shortCut").value,
       blog: ckData,
     };
 
@@ -155,8 +155,8 @@ export default class AdminNewUsers extends Component {
             <input
               type="email"
               className="form-control"
-              id="shortcut"
-              value={this.state.shortcut}
+              id="shortCut"
+              value={this.state.shortCut}
               onChange={this.onChangeShortcut}
               placeholder="Kısa Yazı Giriniz"
             />
@@ -171,11 +171,7 @@ export default class AdminNewUsers extends Component {
               }}
             />
           </div>
-          <a
-            href="/adminBlog"
-            className="btn btn-warning mb-2 mt-5"
-            onClick={this.onSubmit}
-          >
+          <a className="btn btn-warning mb-2 mt-5" onClick={this.onSubmit}>
             Yazı Ekle
           </a>
         </form>
