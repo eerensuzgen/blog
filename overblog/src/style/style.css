@@ -432,3 +432,11 @@ footer #footerCreater:hover {
     transition: all 0.25s ease-out;
   }
 }
+
+/**/
+.adminIcon {
+  color: #e50914;
+}
+.adminIcon:hover {
+  color: blue;
+}
