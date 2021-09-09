@@ -42,13 +42,13 @@ router.route("/:id").delete((req, res) => {
     .catch((err) => res.status(400).json("Error: " + err));
 });
 
-router.route("/update/:id").post((req, res) => {
+router.route("/updateBlog/:id").post((req, res) => {
   Blog.findById(req.params.id)
     .then((Blog) => {
       Blog.title = req.body.title;
       Blog.subtitle = req.body.subtitle;
       Blog.blog_image = req.body.blog_image;
-      Blog.createdAt = Date.parse(req.body.createdAt);
+      Blog.createdAt = req.body.createdAt;
       Blog.shortCut = req.body.shortcut;
       Blog.blog = req.body.blog;
 

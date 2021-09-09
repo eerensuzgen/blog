@@ -3,15 +3,89 @@ import { CKEditor } from "@ckeditor/ckeditor5-react";
 import ClassicEditor from "@ckeditor/ckeditor5-build-classic";
 import axios from "axios";
 
+const getBlogId = window.location.pathname.split("/");
+const blogId = getBlogId[2];
 let ckData = "";
 
 export default class AdminNewUsers extends Component {
-  handleSubmit(data) {
+  constructor(props) {
+    super(props);
+    this.onChangeTitle = this.onChangeTitle.bind(this);
+    this.onChangeSubTitle = this.onChangeSubTitle.bind(this);
+    this.onChangeCreatedAt = this.onChangeCreatedAt.bind(this);
+    this.onChangeBlogImage = this.onChangeBlogImage.bind(this);
+    this.onChangeShortcut = this.onChangeShortcut.bind(this);
+    this.onChangeBlog = this.onChangeBlog.bind(this);
+    this.onSubmit = this.onSubmit.bind(this);
+
+    this.state = {
+      title: "",
+      subtitle: "",
+      createdAt: "",
+      blog_image: "",
+      shortcut: "",
+      blog: "",
+    };
+  }
+
+  componentDidMount() {
+    axios
+      .get("http://localhost:5000/admin/blogs/" + blogId)
+      .then((response) => {
+        this.setState({
+          title: response.data.title,
+          subtitle: response.data.subtitle,
+          blog_image: response.data.blog_image,
+          createdAt: response.data.createdAt,
+          shortcut: response.data.shortcut,
+          blog: response.data.blog,
+        });
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+  }
+
+  onChangeTitle(e) {
+    this.setState({
+      title: e.target.value,
+    });
+  }
+
+  onChangeSubTitle(e) {
+    this.setState({
+      subtitle: e.target.value,
+    });
+  }
+
+  onChangeCreatedAt(e) {
+    this.setState({
+      createdAt: e.target.value,
+    });
+  }
+  onChangeBlogImage(e) {
+    this.setState({
+      blog_image: e.target.value,
+    });
+  }
+  onChangeBlog(e) {
+    this.setState({
+      blog: e.target.value,
+    });
+  }
+  onChangeShortcut(e) {
+    this.setState({
+      shortcut: e.target.value,
+    });
+  }
+
+  onSubmit(e) {
+    e.preventDefault();
     let date = new Date();
     let currentDate = `${date.getDate()}.${
       date.getMonth() + 1
     }.${date.getFullYear()}`;
-    const newBlog = {
+    const blog1 = {
       title: document.getElementById("title").value,
       subtitle: document.getElementById("subtitle").value,
       blog_image: document.getElementById("blog_image").value,
@@ -19,15 +93,16 @@ export default class AdminNewUsers extends Component {
       shortcut: document.getElementById("shortcut").value,
       blog: ckData,
     };
-    console.log(newBlog);
+
     axios
-      .post("http://localhost:5000/admin/blogs/newBlog", newBlog)
-      .then((res) => console.log(res.data))
-      .catch((err) => console.log("Hata: " + err));
+      .post("http://localhost:5000/admin/blogs/updateBlog/" + blogId, blog1)
+      .then(
+        (res) => (window.location = "/adminBlog"),
+        alert("Kullanıcı başarıyla güncellendi")
+      )
+      .catch((err) => console.log(err));
   }
   render() {
-    let date = new Date(Date.now());
-    console.log(date);
     return (
       <div className="container mt-5">
         <div className="container d-flex justify-content-center align-items-center column mb-5">
@@ -48,6 +123,8 @@ export default class AdminNewUsers extends Component {
               type="text"
               className="form-control"
               id="title"
+              value={this.state.title}
+              onChange={this.onChangeTitle}
               placeholder="Yazı Başlığını Giriniz"
             />
           </div>
@@ -57,6 +134,8 @@ export default class AdminNewUsers extends Component {
               type="text"
               className="form-control"
               id="subtitle"
+              value={this.state.subtitle}
+              onChange={this.onChangeSubTitle}
               placeholder="Yazı Alt Başlığını Giriniz"
             />
           </div>
@@ -66,6 +145,8 @@ export default class AdminNewUsers extends Component {
               type="text"
               className="form-control"
               id="blog_image"
+              value={this.state.blog_image}
+              onChange={this.onChangeBlogImage}
               placeholder="Yazı Fotoğraf Yolunu Giriniz"
             />
           </div>
@@ -75,6 +156,8 @@ export default class AdminNewUsers extends Component {
               type="email"
               className="form-control"
               id="shortcut"
+              value={this.state.shortcut}
+              onChange={this.onChangeShortcut}
               placeholder="Kısa Yazı Giriniz"
             />
           </div>
@@ -82,6 +165,7 @@ export default class AdminNewUsers extends Component {
             <h6>Yazı</h6>{" "}
             <CKEditor
               editor={ClassicEditor}
+              data={this.state.blog}
               onBlur={(event, editor) => {
                 ckData = JSON.stringify(editor.getData());
               }}
@@ -90,7 +174,7 @@ export default class AdminNewUsers extends Component {
           <a
             href="/adminBlog"
             className="btn btn-warning mb-2 mt-5"
-            onClick={this.handleSubmit}
+            onClick={this.onSubmit}
           >
             Yazı Ekle
           </a>

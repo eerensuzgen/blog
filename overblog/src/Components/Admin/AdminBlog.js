@@ -8,7 +8,7 @@ const Blogs = (props) => (
     <td>{props.blogs.subtitle}</td>
     <td>{props.blogs.shortcut}</td>
     <td>
-      <a href={"/adminBlogNew/" + props.blogs._id}>
+      <a href={"/adminBlogEdit/" + props.blogs._id}>
         {" "}
         <i className="fa fa-pencil fa-2x adminIcon"></i>
       </a>
