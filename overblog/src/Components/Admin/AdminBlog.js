@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import axios from "axios";
 
 const Blogs = (props) => (
   <tr>
@@ -31,40 +30,13 @@ const Blogs = (props) => (
 );
 
 export default class AdminBlog extends Component {
-  constructor(props) {
-    super(props);
-    this.deleteBlog = this.deleteBlog.bind(this);
-    this.state = { blogs: [] };
-  }
-
-  componentDidMount() {
-    axios
-      .get("http://localhost:5000/admin/blogs/")
-      .then((response) => {
-        this.setState({ blogs: response.data });
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-  }
-
-  deleteBlog(id) {
-    axios.delete("http://localhost:5000/admin/blogs/" + id).then((response) => {
-      console.log(response.data);
-    });
-
-    this.setState({
-      blogs: this.state.blogs.filter((el) => el._id !== id),
-    });
-  }
-
   blogsList() {
-    return this.state.blogs.map((currentblogs) => {
+    return this.props.blogs.map((currentblogs) => {
       return (
         <Blogs
           blogs={currentblogs}
           key={currentblogs._id}
-          deleteBlog={this.deleteBlog}
+          deleteBlog={this.props.deleteBlog}
         />
       );
     });

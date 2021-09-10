@@ -1,14 +1,15 @@
 import React, { Component } from "react";
-import axios from "axios";
 import ReactHtmlParser from "react-html-parser";
+import NotFound from "./NotFound";
 
 const getBlogId = window.location.pathname.split("/");
 const blogId = getBlogId[2];
 
+
 const Blogs = (props) => (
-  <article className="postcard light blue">
+  <article >
     <img
-      className="postcard__img"
+      className="blogDetailImage"
       src={props.blogs.blog_image}
       alt="blogImage"
     />
@@ -32,29 +33,26 @@ const Blogs = (props) => (
 );
 
 export default class BlogDetail extends Component {
-  constructor(props) {
-    super(props);
-    this.state = { blogs: [] };
-  }
-
-  componentDidMount() {
-    axios
-      .get("http://localhost:5000/admin/blogs/" + blogId)
-      .then((response) => {
-        this.setState({ blogs: response.data });
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-  }
-
+  
   blogsList() {
-    return <Blogs blogs={this.state.blogs} key={this.state.blogs._id} />;
+    return this.props.blogs.map((currentblogs) => {
+      if(currentblogs._id === blogId){
+        return (
+          <Blogs
+            blogs={currentblogs}
+            key={currentblogs._id}
+          />
+        );
+      }
+      else {<NotFound/>}
+      
+    });
   }
   render() {
     return (
+      
       <div className="blogDetail">
-        <div className="pageDiv" />
+       
         {this.blogsList()}
       </div>
     );

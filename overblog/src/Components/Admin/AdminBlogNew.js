@@ -85,6 +85,9 @@ export default class AdminNewUsers extends Component {
               onBlur={(event, editor) => {
                 ckData = JSON.stringify(editor.getData());
               }}
+              // config={{
+              //   ckfinder: { uploadUrl: "" },
+              // }}
             />
           </div>
           <a

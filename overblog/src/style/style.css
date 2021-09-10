@@ -376,8 +376,42 @@ footer #footerCreater:hover {
 .blogDetail {
   text-align: center;
   font-size: 50px;
-  padding: 15%;
+  padding: 7% 17% 7% 17%;
   background: #f3f5f7;
+}
+.blogDetailImage{
+  width: 55rem;
+  height: 80vh;
+
+  margin-bottom: 5rem;
+}
+@media only screen and (max-width: 1025px) and (min-width: 960px) {
+  .blogDetail {
+    text-align: center;
+    font-size: 50px;
+    padding: 15%;
+    background: #f3f5f7;
+  } 
+  .blogDetailImage{
+    width: 40rem;
+    height: 35vh;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+}
+@media (max-width:960px) {
+  .blogDetail {
+    text-align: center;
+    font-size: 50px;
+    padding: 15%;
+    background: #f3f5f7;
+  } 
+  .blogDetailImage{
+    width: 15rem;
+    height: 25vh;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
 }
 
 /**/

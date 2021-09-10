@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import axios from "axios";
 
 const Blogs = (props) => (
   <article className="postcard light blue">
@@ -34,25 +33,9 @@ const Blogs = (props) => (
 );
 
 export default class ShortBlog extends Component {
-  constructor(props) {
-    super(props);
-    this.state = { blogs: [] };
-  }
-
-  componentDidMount() {
-    axios
-      .get("http://localhost:5000/admin/blogs/")
-      .then((response) => {
-        this.setState({ blogs: response.data });
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-  }
-
   blogsList() {
-    let lastIndex = this.state.blogs.length;
-    return this.state.blogs.reverse().map((currentblogs, i) => {
+    let lastIndex = this.props.blogs.length;
+    return this.props.blogs.reverse().map((currentblogs, i) => {
       if (lastIndex === i + lastIndex) {
         return <Blogs blogs={currentblogs} key={currentblogs._id} />;
       } else if (lastIndex + 1 === i + lastIndex) {

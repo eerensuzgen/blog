@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React from "react";
 
 const NavBar = (props) => {
   //   const [isOpen, setIsOpen] = useState(false);
@@ -29,7 +28,7 @@ const NavBar = (props) => {
           class="navbar navbar-expand-md navbar-light bg-light"
           id="navigation"
         >
-          <img src="./img/logoRed.png" width="17.5%" id="navigationBarLogo" />
+          <img src="/img/logoRed.png" width="17.5%" id="navigationBarLogo" />
           <button
             type="button"
             class="navbar-toggler"
@@ -40,10 +39,10 @@ const NavBar = (props) => {
           </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav d-flex ml-auto">
-              <Link to="/">Anasayfa</Link>
-              <Link to="/about">Hakkımda</Link>
-              <Link to="/blog">Yazılar</Link>
-              <Link to="/contact">İletişim</Link>
+              <a href="/">Anasayfa</a>
+              <a href="/about">Hakkımda</a>
+              <a href="/blog">Yazılar</a>
+              <a href="/contact">İletişim</a>
             </div>
           </div>
         </nav>
