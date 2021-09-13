@@ -30,7 +30,7 @@ export default class AdminNewUsers extends Component {
 
   componentDidMount() {
     axios
-      .get("http://localhost:5000/admin/blogs/" + blogId)
+      .get("https://kuskulu-backend.herokuapp.com/admin/blogs/" + blogId)
       .then((response) => {
         this.setState({
           title: response.data.title,
@@ -95,7 +95,11 @@ export default class AdminNewUsers extends Component {
     };
 
     axios
-      .post("http://localhost:5000/admin/blogs/updateBlog/" + blogId, blog1)
+      .post(
+        "https://kuskulu-backend.herokuapp.com/admin/blogs/updateBlog/" +
+          blogId,
+        blog1
+      )
       .then(
         (res) => (window.location = "/adminBlog"),
         alert("Yazı başarıyla güncellendi")

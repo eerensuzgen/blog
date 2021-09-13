@@ -17,7 +17,6 @@ import AdminBlogEdit from "./Components/Admin/AdminBlogEdit";
 import axios from "axios";
 
 class App extends Component {
-  
   constructor(props) {
     super(props);
     this.deleteBlog = this.deleteBlog.bind(this);
@@ -27,9 +26,9 @@ class App extends Component {
   componentDidMount() {
     this.getBlogsDataFromDatabase();
   }
-  getBlogsDataFromDatabase (){
+  getBlogsDataFromDatabase() {
     axios
-      .get("http://localhost:5000/admin/blogs/")
+      .get("https://kuskulu-backend.herokuapp.com/admin/blogs/")
       .then((response) => {
         this.setState({ blogs: response.data });
       })
@@ -38,9 +37,11 @@ class App extends Component {
       });
   }
   deleteBlog(id) {
-    axios.delete("http://localhost:5000/admin/blogs/" + id).then((response) => {
-      console.log(response.data);
-    });
+    axios
+      .delete("https://kuskulu-backend.herokuapp.com/admin/blogs/" + id)
+      .then((response) => {
+        console.log(response.data);
+      });
 
     this.setState({
       blogs: this.state.blogs.filter((el) => el._id !== id),
@@ -52,14 +53,52 @@ class App extends Component {
       <div className="App">
         <Nav />
         <Switch>
-          <Route exact path="/" render={props=>(<HomePage {...props} blogs={this.state.blogs} getData={this.getBlogsDataFromDatabase}/> )}/>
+          <Route
+            exact
+            path="/"
+            render={(props) => (
+              <HomePage
+                {...props}
+                blogs={this.state.blogs}
+                getData={this.getBlogsDataFromDatabase}
+              />
+            )}
+          />
           <Route path="/about" component={About} />
-          <Route path="/blog" render={props=>(<Blog {...props} blogs={this.state.blogs} getData={this.getBlogsDataFromDatabase}/> )} />
-          <Route path="/blogDetail/" render={props=>(<BlogDetail {...props} blogs={this.state.blogs} getData={this.getBlogsDataFromDatabase}/> )}  />
+          <Route
+            path="/blog"
+            render={(props) => (
+              <Blog
+                {...props}
+                blogs={this.state.blogs}
+                getData={this.getBlogsDataFromDatabase}
+              />
+            )}
+          />
+          <Route
+            path="/blogDetail/"
+            render={(props) => (
+              <BlogDetail
+                {...props}
+                blogs={this.state.blogs}
+                getData={this.getBlogsDataFromDatabase}
+              />
+            )}
+          />
           <Route path="/contact" component={Contact} />
           <Route path="/admin" component={AdminLogin} />
           <Route path="/adminDashboard" component={AdminDashboard} />
-          <Route path="/adminBlog" render={props=>(<AdminBlog {...props} blogs={this.state.blogs} getData={this.getBlogsDataFromDatabase} deleteBlog={this.deleteBlog} /> )} />
+          <Route
+            path="/adminBlog"
+            render={(props) => (
+              <AdminBlog
+                {...props}
+                blogs={this.state.blogs}
+                getData={this.getBlogsDataFromDatabase}
+                deleteBlog={this.deleteBlog}
+              />
+            )}
+          />
           <Route path="/adminBlogNew" component={AdminBlogNew} />
           <Route path="/adminBlogEdit" component={AdminBlogEdit} />
           <Route component={NotFound} />
