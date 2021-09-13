@@ -21,7 +21,10 @@ export default class AdminNewUsers extends Component {
     };
     console.log(newBlog);
     axios
-      .post("http://localhost:5000/admin/blogs/newBlog", newBlog)
+      .post(
+        "https://kuskulu-backend.herokuapp.com/admin/blogs/newBlog",
+        newBlog
+      )
       .then((res) => console.log(res.data))
       .catch((err) => console.log("Hata: " + err));
   }
