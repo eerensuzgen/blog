@@ -120,7 +120,7 @@ a:hover {
   font-weight: 400;
   text-transform: uppercase;
   text-decoration: none;
-  color: #e50914;
+  color: blue;
   margin: 0 8px;
   font-size: 16px;
   letter-spacing: 1px;
@@ -152,7 +152,7 @@ nav a:hover:before {
 @media (max-width: 750px) {
   .navigationBar {
     background-color: #f3f5f7;
-    color: #e50914;
+    color: blue;
   }
   .navigationBar a {
     text-align: center;
@@ -240,7 +240,7 @@ footer .footerIcon {
   text-decoration: none;
 }
 footer .footerIcon:hover {
-  color: #e50914;
+  color: blue;
 }
 footer #footerCreater {
   font-weight: bold;
@@ -249,7 +249,7 @@ footer #footerCreater {
   color: #fff;
 }
 footer #footerCreater:hover {
-  color: #e50914;
+  color: blue;
 }
 
 /* InfoAbout Section */
@@ -374,12 +374,18 @@ footer #footerCreater:hover {
 /* Blog Detail */
 
 .blogDetail {
+  font-family: "Times New Roman", Times, serif;
   text-align: center;
   font-size: 50px;
   padding: 7% 17% 7% 17%;
   background: #f3f5f7;
 }
-.blogDetailImage{
+.blogDetail1 {
+  text-align: justify;
+  font-size: 12px;
+  background: #f3f5f7;
+}
+.blogDetailImage {
   width: 55rem;
   height: 80vh;
 
@@ -391,22 +397,22 @@ footer #footerCreater:hover {
     font-size: 50px;
     padding: 15%;
     background: #f3f5f7;
-  } 
-  .blogDetailImage{
+  }
+  .blogDetailImage {
     width: 40rem;
     height: 35vh;
     margin-top: 2rem;
     margin-bottom: 2rem;
   }
 }
-@media (max-width:960px) {
+@media (max-width: 960px) {
   .blogDetail {
     text-align: center;
     font-size: 50px;
     padding: 15%;
     background: #f3f5f7;
-  } 
-  .blogDetailImage{
+  }
+  .blogDetailImage {
     width: 15rem;
     height: 25vh;
     margin-top: 2rem;
@@ -435,7 +441,7 @@ footer #footerCreater:hover {
   position: relative;
   text-transform: uppercase;
   text-shadow: -15px 5px 20px rgb(66, 66, 66);
-  color: #e50914;
+  color: #0000ff;
   letter-spacing: -0.05em;
   font-family: "Anton", Arial, sans-serif;
   user-select: none;
@@ -457,7 +463,7 @@ footer #footerCreater:hover {
     position: relative;
     text-transform: uppercase;
     text-shadow: -15px 5px 20px rgb(66, 66, 66);
-    color: #e50914;
+    color: blue;
     letter-spacing: -0.05em;
     font-family: "Anton", Arial, sans-serif;
     user-select: none;
@@ -469,8 +475,8 @@ footer #footerCreater:hover {
 
 /**/
 .adminIcon {
-  color: #e50914;
+  color: blue;
 }
 .adminIcon:hover {
-  color: blue;
+  color: red;
 }

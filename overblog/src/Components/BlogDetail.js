@@ -5,9 +5,8 @@ import NotFound from "./NotFound";
 const getBlogId = window.location.pathname.split("/");
 const blogId = getBlogId[2];
 
-
 const Blogs = (props) => (
-  <article >
+  <article>
     <img
       className="blogDetailImage"
       src={props.blogs.blog_image}
@@ -24,7 +23,7 @@ const Blogs = (props) => (
         </time>
       </div>
       <div className="postcard__bar"></div>{" "}
-      <div style={{ fontSize: "1rem" }}>
+      <div style={{ fontSize: "1rem" }} className="blogDetail1">
         {" "}
         {ReactHtmlParser(`${props.blogs.blog}`)}
       </div>
@@ -33,28 +32,16 @@ const Blogs = (props) => (
 );
 
 export default class BlogDetail extends Component {
-  
   blogsList() {
     return this.props.blogs.map((currentblogs) => {
-      if(currentblogs._id === blogId){
-        return (
-          <Blogs
-            blogs={currentblogs}
-            key={currentblogs._id}
-          />
-        );
+      if (currentblogs._id === blogId) {
+        return <Blogs blogs={currentblogs} key={currentblogs._id} />;
+      } else {
+        <NotFound />;
       }
-      else {<NotFound/>}
-      
     });
   }
   render() {
-    return (
-      
-      <div className="blogDetail">
-       
-        {this.blogsList()}
-      </div>
-    );
+    return <div className="blogDetail">{this.blogsList()}</div>;
   }
 }

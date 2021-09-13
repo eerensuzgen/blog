@@ -40,6 +40,8 @@ export default class ShortBlog extends Component {
         return <Blogs blogs={currentblogs} key={currentblogs._id} />;
       } else if (lastIndex + 1 === i + lastIndex) {
         return <Blogs blogs={currentblogs} key={currentblogs._id} />;
+      } else if (lastIndex + 2 === i + lastIndex) {
+        return <Blogs blogs={currentblogs} key={currentblogs._id} />;
       }
     });
   }
