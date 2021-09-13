@@ -83,7 +83,11 @@ export default class AdminNewUsers extends Component {
             <CKEditor
               editor={ClassicEditor}
               onBlur={(event, editor) => {
-                ckData = JSON.stringify(editor.getData());
+                const rawData = JSON.stringify(editor.getData());
+                let datax = rawData.split('"');
+                datax.pop();
+                datax.shift();
+                ckData = datax.join();
               }}
               // config={{
               //   ckfinder: { uploadUrl: "" },

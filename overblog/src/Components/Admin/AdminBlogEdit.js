@@ -98,7 +98,7 @@ export default class AdminNewUsers extends Component {
       .post("http://localhost:5000/admin/blogs/updateBlog/" + blogId, blog1)
       .then(
         (res) => (window.location = "/adminBlog"),
-        alert("Kullanıcı başarıyla güncellendi")
+        alert("Yazı başarıyla güncellendi")
       )
       .catch((err) => console.log(err));
   }
@@ -167,12 +167,16 @@ export default class AdminNewUsers extends Component {
               editor={ClassicEditor}
               data={this.state.blog}
               onBlur={(event, editor) => {
-                ckData = JSON.stringify(editor.getData());
+                const rawData = JSON.stringify(editor.getData());
+                let datax = rawData.split('"');
+                datax.pop();
+                datax.shift();
+                ckData = datax.join();
               }}
             />
           </div>
           <a className="btn btn-warning mb-2 mt-5" onClick={this.onSubmit}>
-            Yazı Ekle
+            Yazı Güncelle
           </a>
         </form>
       </div>
