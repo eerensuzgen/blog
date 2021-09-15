@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import auth from "../Admin/auth";
 
 export default class AdminDashboard extends Component {
   render() {
@@ -20,9 +21,16 @@ export default class AdminDashboard extends Component {
             Yazılarım
           </a>
 
-          <a href="/" className="btn btn-danger col-md-2 mt-3 btn-lg">
+          <button
+            className="btn btn-danger col-md-2 mt-3 btn-lg"
+            onClick={() => {
+              auth.logout(() => {
+                this.props.history.push("/admin");
+              });
+            }}
+          >
             Çıkış Yap
-          </a>
+          </button>
         </div>
       </div>
     );

@@ -1,24 +1,7 @@
 import React, { Component } from "react";
-import axios from "axios";
+import auth from "../Admin/auth";
 
 export default class AdminLogin extends Component {
-  handleSubmit = (e) => {
-    const adminUsername = "admin";
-    const adminPassword = "admin";
-    const username = document.getElementById("userName").value;
-    const password = document.getElementById("userPassword").value;
-
-    if (adminUsername === username && adminPassword === password) {
-      localStorage.clear();
-      window.open("/adminDashboard", "_self");
-      alert("Giriş başarılı!");
-    } else {
-      alert("Kullanıcı adı veya şifre hatalı!");
-      localStorage.clear();
-      window.open("/admin", "_self");
-    }
-  };
-
   render() {
     return (
       <div className="container-fluid ps-md-0 min-vh-100 d-flex justify-content-center align-items-center">
@@ -38,7 +21,6 @@ export default class AdminLogin extends Component {
                           type="text"
                           className="form-control"
                           id="userName"
-                          required
                           placeholder="Lütfen kullanıcı adınızı giriniz"
                         />
                         <label>Kullanıcı Adı</label>
@@ -48,18 +30,38 @@ export default class AdminLogin extends Component {
                           type="password"
                           className="form-control"
                           id="userPassword"
-                          required
                           placeholder="Lütfen şifrenizi giriniz"
                         />
                         <label>Şifre</label>
                       </div>
-                      <p
+                      <button
                         type="btn"
                         className="btn btn-outline-danger btn-lg btn-block"
-                        onClick={this.handleSubmit}
+                        onClick={() => {
+                          const adminUsername = "admin";
+                          const adminPassword = "admin";
+                          const username =
+                            document.getElementById("userName").value;
+                          const password =
+                            document.getElementById("userPassword").value;
+
+                          if (
+                            adminUsername === username &&
+                            adminPassword === password
+                          ) {
+                            auth.login(() => {
+                              this.props.history.push("/adminDashboard");
+                            });
+                            alert("Giriş başarılı!");
+                          } else {
+                            alert("Kullanıcı adı veya şifre hatalı!");
+
+                            window.open("/admin", "_self");
+                          }
+                        }}
                       >
                         Giriş Yap
-                      </p>
+                      </button>
 
                       <div className="d-grid"></div>
                     </form>

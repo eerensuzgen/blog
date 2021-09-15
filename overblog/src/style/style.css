@@ -218,14 +218,14 @@ footer {
   background-color: black;
   color: #fff;
 }
-footer .footerBlock {
+.footerBlock {
   display: flex;
   align-items: center;
   justify-content: center;
   padding-top: 2.5%;
   padding-bottom: 1%;
 }
-footer .footerBlock1 {
+.footerBlock1 {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -233,22 +233,22 @@ footer .footerBlock1 {
 .footerCopyRight {
   padding-bottom: 2%;
 }
-footer .footerIcon {
+.footerIcon {
   padding-right: 0.7rem;
   padding-left: 0.7rem;
   color: #fff;
   text-decoration: none;
 }
-footer .footerIcon:hover {
+.footerIcon:hover {
   color: blue;
 }
-footer #footerCreater {
+#footerCreater {
   font-weight: bold;
   font-style: italic;
   text-decoration: none;
   color: #fff;
 }
-footer #footerCreater:hover {
+#footerCreater:hover {
   color: blue;
 }
 

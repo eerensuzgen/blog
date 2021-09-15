@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Nav from "./Components/Navbar";
 import "../src/style/style.css";
 import Footer from "./Components/Footer";
-import { Switch, Route, useRouteMatch } from "react-router-dom";
+import { Switch, Route, useLocation, Redirect } from "react-router-dom";
 import HomePage from "./Components/HomePage";
 import About from "./Components/About";
 import Blog from "./Components/Blog";
@@ -15,6 +15,7 @@ import AdminBlog from "./Components/Admin/AdminBlog";
 import AdminBlogNew from "./Components/Admin/AdminBlogNew";
 import AdminBlogEdit from "./Components/Admin/AdminBlogEdit";
 import axios from "axios";
+import { ProtectedRoute } from "./Components/Admin/protectedRoute";
 
 class App extends Component {
   constructor(props) {
@@ -86,10 +87,18 @@ class App extends Component {
             )}
           />
           <Route path="/contact" component={Contact} />
-          <Route path="/admin" component={AdminLogin} />
-          <Route path="/adminDashboard" component={AdminDashboard} />
+          <Route
+            path="/admin"
+            render={(props) => <AdminLogin {...props} isAuth={this.isAuth} />}
+          />
+          <ProtectedRoute
+            exact
+            path="/adminDashboard"
+            component={AdminDashboard}
+          />
           <Route
             path="/adminBlog"
+            exact
             render={(props) => (
               <AdminBlog
                 {...props}
@@ -99,8 +108,8 @@ class App extends Component {
               />
             )}
           />
-          <Route path="/adminBlogNew" component={AdminBlogNew} />
-          <Route path="/adminBlogEdit" component={AdminBlogEdit} />
+          <Route exact path="/adminBlogNew" component={AdminBlogNew} />
+          <Route exact path="/adminBlogEdit" component={AdminBlogEdit} />
           <Route component={NotFound} />
         </Switch>
         <Footer />

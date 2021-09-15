@@ -12,7 +12,7 @@ export default class AdminNewUsers extends Component {
     super(props);
     this.onChangeTitle = this.onChangeTitle.bind(this);
     this.onChangeSubTitle = this.onChangeSubTitle.bind(this);
-    this.onChangeCreatedAt = this.onChangeCreatedAt.bind(this);
+    this.onChangeUpdatedAt = this.onChangeUpdatedAt.bind(this);
     this.onChangeBlogImage = this.onChangeBlogImage.bind(this);
     this.onChangeShortcut = this.onChangeShortcut.bind(this);
     this.onChangeBlog = this.onChangeBlog.bind(this);
@@ -22,6 +22,7 @@ export default class AdminNewUsers extends Component {
       title: "",
       subtitle: "",
       createdAt: "",
+      updatedAt: "",
       blog_image: "",
       shortCut: "",
       blog: "",
@@ -37,6 +38,7 @@ export default class AdminNewUsers extends Component {
           subtitle: response.data.subtitle,
           blog_image: response.data.blog_image,
           createdAt: response.data.createdAt,
+          updatedAt: response.data.updatedAt,
           shortCut: response.data.shortCut,
           blog: response.data.blog,
         });
@@ -58,9 +60,9 @@ export default class AdminNewUsers extends Component {
     });
   }
 
-  onChangeCreatedAt(e) {
+  onChangeUpdatedAt(e) {
     this.setState({
-      createdAt: e.target.value,
+      updatedAt: e.target.value,
     });
   }
   onChangeBlogImage(e) {
@@ -84,12 +86,13 @@ export default class AdminNewUsers extends Component {
     let date = new Date();
     let currentDate = `${date.getDate()}.${
       date.getMonth() + 1
-    }.${date.getFullYear()}`;
+    }.${date.getFullYear()}   ${date.getHours()}.${date.getMinutes()}`;
     const blog1 = {
       title: document.getElementById("title").value,
       subtitle: document.getElementById("subtitle").value,
       blog_image: document.getElementById("blog_image").value,
-      createdAt: String(currentDate),
+      createdAt: this.state.createdAt,
+      updatedAt: String(currentDate),
       shortCut: document.getElementById("shortCut").value,
       blog: ckData,
     };
@@ -179,9 +182,9 @@ export default class AdminNewUsers extends Component {
               }}
             />
           </div>
-          <a className="btn btn-warning mb-2 mt-5" onClick={this.onSubmit}>
+          <p className="btn btn-warning mb-2 mt-5" onClick={this.onSubmit}>
             Yazı Güncelle
-          </a>
+          </p>
         </form>
       </div>
     );

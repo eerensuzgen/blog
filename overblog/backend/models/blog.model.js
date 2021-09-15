@@ -10,11 +10,13 @@ const BlogSchema = new Schema({
     type: String,
   },
   blog_image: {
-    type: String,
-    default: "default.jpg",
+    type: Object,
   },
   createdAt: {
     type: String,
+  },
+  updatedUp: {
+    type: string,
   },
   shortCut: { type: String, required: "Boş Bırakılamaz" },
   blog: {

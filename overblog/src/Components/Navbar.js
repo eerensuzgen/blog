@@ -23,22 +23,27 @@ const NavBar = (props) => {
   //   }
   return (
     <div>
-      <div class="bs-example container-fluid navigationBar ">
+      <div className="bs-example container-fluid navigationBar ">
         <nav
-          class="navbar navbar-expand-md navbar-light bg-light"
+          className="navbar navbar-expand-md navbar-light bg-light"
           id="navigation"
         >
-          <img src="/img/logoRed.png" width="17.5%" id="navigationBarLogo" />
+          <img
+            src="/img/logoRed.png"
+            alt="logo"
+            width="17.5%"
+            id="navigationBarLogo"
+          />
           <button
             type="button"
-            class="navbar-toggler"
+            className="navbar-toggler"
             data-toggle="collapse"
             data-target="#navbarCollapse"
           >
-            <span class="navbar-toggler-icon"></span>
+            <span className="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse" id="navbarCollapse">
-            <div class="navbar-nav d-flex ml-auto">
+          <div className="collapse navbar-collapse" id="navbarCollapse">
+            <div className="navbar-nav d-flex ml-auto">
               <a href="/">Anasayfa</a>
               <a href="/about">Hakkımda</a>
               <a href="/blog">Yazılar</a>

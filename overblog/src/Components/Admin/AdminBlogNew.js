@@ -10,12 +10,13 @@ export default class AdminNewUsers extends Component {
     let date = new Date();
     let currentDate = `${date.getDate()}.${
       date.getMonth() + 1
-    }.${date.getFullYear()}`;
+    }.${date.getFullYear()}   ${date.getHours()}.${date.getMinutes()}`;
     const newBlog = {
       title: document.getElementById("title").value,
       subtitle: document.getElementById("subtitle").value,
       blog_image: document.getElementById("blog_image").value,
       createdAt: String(currentDate),
+      updatedAt: String(currentDate),
       shortcut: document.getElementById("shortcut").value,
       blog: ckData,
     };

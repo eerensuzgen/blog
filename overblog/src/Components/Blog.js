@@ -1,40 +1,42 @@
 import React, { Component } from "react";
-import {Link} from "react-router-dom";
-
 
 export default class Blog extends Component {
   blogsList() {
     return this.props.blogs.map((currentblogs) => {
-      return <article className="postcard light blue">
-      <a className="postcard__img_link" href="/blogDetail">
-        <img
-          className="postcard__img"
-          src={currentblogs.blog_image}
-          alt="blogImage"
-        />
-      </a>
-      <div className="postcard__text t-dark">
-        <h1 className="postcard__title blue">
-          <a href={"/blogDetail/" + currentblogs._id}>{currentblogs.title}</a>
-        </h1>
-        <div className="postcard__subtitle small">
-          <time dateTime="2020-05-25 12:00:00">
-            <small>
-              <em> {currentblogs.createdAt}</em>
-            </small>
-          </time>
-        </div>
-        <div className="postcard__bar"></div>{" "}
-        <div className="postcard__preview-txt">{currentblogs.shortCut}</div>
-        
-        <ul className="postcard__tagbox">
-          <a href={"/blogDetail/" + currentblogs._id}>         
-            <li className="tag__item">Devamı için tıklayınız</li>
+      return (
+        <article className="postcard light blue">
+          <a className="postcard__img_link" href="/blogDetail">
+            <img
+              className="postcard__img"
+              src={currentblogs.blog_image}
+              alt="blogImage"
+            />
           </a>
-        </ul>
-      </div>
-    </article>;
-
+          <div className="postcard__text t-dark">
+            <h1 className="postcard__title blue">
+              <a href={"/blogDetail/" + currentblogs._id}>
+                {currentblogs.title}
+              </a>
+            </h1>
+            <div className="postcard__subtitle small">
+              <time dateTime="2020-05-25 12:00:00">
+                <small>
+                  <em> {currentblogs.createdAt}</em>
+                </small>
+              </time>
+            </div>
+            <div className="postcard__bar"></div>{" "}
+            <div className="postcard__preview-txt">{currentblogs.shortCut}</div>
+            <ul className="postcard__tagbox">
+              <li className="tag__item">
+                <a href={"/blogDetail/" + currentblogs._id}>
+                  Devamı için tıklayınız
+                </a>
+              </li>
+            </ul>
+          </div>
+        </article>
+      );
     });
   }
   render() {
