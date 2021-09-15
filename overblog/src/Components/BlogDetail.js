@@ -9,7 +9,7 @@ const Blogs = (props) => (
   <article>
     <img
       className="blogDetailImage"
-      src={props.blogs.blog_image}
+      src={props.blogs.blog_image.base64}
       alt="blogImage"
     />
     <div className="postcard__text t-dark">
@@ -18,7 +18,15 @@ const Blogs = (props) => (
       <div style={{ fontSize: "1.5rem" }}>
         <time dateTime="2020-05-25 12:00:00">
           <small>
-            <em> {props.blogs.createdAt}</em>
+            {props.blogs.createdAt === props.blogs.updatedAt ? (
+              <em> Oluşturma tarihi :{props.blogs.createdAt}</em>
+            ) : (
+              <em>
+                {" "}
+                Oluşturma tarihi : {props.blogs.createdAt} Güncelleme Tarihi :{" "}
+                {props.blogs.updatedAt}
+              </em>
+            )}
           </small>
         </time>
       </div>

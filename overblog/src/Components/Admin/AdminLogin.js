@@ -38,26 +38,23 @@ export default class AdminLogin extends Component {
                         type="btn"
                         className="btn btn-outline-danger btn-lg btn-block"
                         onClick={() => {
-                          const adminUsername = "admin";
-                          const adminPassword = "admin";
-                          const username =
-                            document.getElementById("userName").value;
-                          const password =
-                            document.getElementById("userPassword").value;
+                          this.props.admins.forEach((currentusers) => {
+                            if (
+                              currentusers.username ===
+                                document.getElementById("userName").value &&
+                              currentusers.password ===
+                                document.getElementById("userPassword").value
+                            ) {
+                              auth.login(() => {
+                                alert("Giriş Başarılı");
+                                this.props.history.push("/adminDashboard");
+                              });
+                            } else {
+                              alert("Kullanıcı adı veya şifre hatalı!");
 
-                          if (
-                            adminUsername === username &&
-                            adminPassword === password
-                          ) {
-                            auth.login(() => {
-                              this.props.history.push("/adminDashboard");
-                            });
-                            alert("Giriş başarılı!");
-                          } else {
-                            alert("Kullanıcı adı veya şifre hatalı!");
-
-                            window.open("/admin", "_self");
-                          }
+                              window.open("/admin", "_self");
+                            }
+                          });
                         }}
                       >
                         Giriş Yap

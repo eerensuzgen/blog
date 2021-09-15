@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Nav from "./Components/Navbar";
 import "../src/style/style.css";
 import Footer from "./Components/Footer";
-import { Switch, Route, useLocation, Redirect } from "react-router-dom";
+import { Switch, Route } from "react-router-dom";
 import HomePage from "./Components/HomePage";
 import About from "./Components/About";
 import Blog from "./Components/Blog";
@@ -21,11 +21,12 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.deleteBlog = this.deleteBlog.bind(this);
-    this.state = { blogs: [] };
+    this.state = { blogs: [], admins: [] };
   }
 
   componentDidMount() {
     this.getBlogsDataFromDatabase();
+    this.getAdminsDataFromDatabase();
   }
   getBlogsDataFromDatabase() {
     axios
@@ -47,6 +48,16 @@ class App extends Component {
     this.setState({
       blogs: this.state.blogs.filter((el) => el._id !== id),
     });
+  }
+  getAdminsDataFromDatabase() {
+    axios
+      .get("https://kuskulu-backend.herokuapp.com/admin/admins/")
+      .then((response) => {
+        this.setState({ admins: response.data });
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   }
 
   render() {
@@ -89,17 +100,19 @@ class App extends Component {
           <Route path="/contact" component={Contact} />
           <Route
             path="/admin"
-            render={(props) => <AdminLogin {...props} isAuth={this.isAuth} />}
-          />
-          <ProtectedRoute
-            exact
-            path="/adminDashboard"
-            component={AdminDashboard}
-          />
-          <Route
-            path="/adminBlog"
-            exact
             render={(props) => (
+              <AdminLogin
+                {...props}
+                isAuth={this.isAuth}
+                getAdminsDataFromDatabase={this.getAdminsDataFromDatabase}
+                admins={this.state.admins}
+              />
+            )}
+          />
+          <ProtectedRoute path="/adminDashboard" component={AdminDashboard} />
+          <ProtectedRoute
+            path="/adminBlog"
+            component={(props) => (
               <AdminBlog
                 {...props}
                 blogs={this.state.blogs}
@@ -108,8 +121,8 @@ class App extends Component {
               />
             )}
           />
-          <Route exact path="/adminBlogNew" component={AdminBlogNew} />
-          <Route exact path="/adminBlogEdit" component={AdminBlogEdit} />
+          <ProtectedRoute path="/adminBlogNew" component={AdminBlogNew} />
+          <ProtectedRoute path="/adminBlogEdit" component={AdminBlogEdit} />
           <Route component={NotFound} />
         </Switch>
         <Footer />

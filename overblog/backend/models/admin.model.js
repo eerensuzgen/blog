@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
-const BlogSchema = new Schema({
+const AdminSchema = new Schema({
   name: {
     type: String,
   },
@@ -17,4 +17,4 @@ const BlogSchema = new Schema({
   },
 });
 
-module.exports = mongoose.model("Blog", BlogSchema);
+module.exports = mongoose.model("Admin", AdminSchema);

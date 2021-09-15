@@ -15,8 +15,8 @@ const BlogSchema = new Schema({
   createdAt: {
     type: String,
   },
-  updatedUp: {
-    type: string,
+  updatedAt: {
+    type: String,
   },
   shortCut: { type: String, required: "Boş Bırakılamaz" },
   blog: {

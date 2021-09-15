@@ -1,13 +1,12 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
 
 const Blogs = (props) => (
   <tr>
     <td>{props.blogs.title}</td>
     <td>{props.blogs.subtitle}</td>
-    <td>{props.blogs.shortcut}</td>
+    <td>{props.blogs.shortCut}</td>
     <td>
-      <a href={"/adminBlogEdit/" + props.blogs._id}>
+      <a onClick={() => props.route.push(`/adminBlogEdit/${props.blogs._id}`)}>
         {" "}
         <i className="fa fa-pencil fa-2x adminIcon"></i>
       </a>
@@ -36,6 +35,7 @@ export default class AdminBlog extends Component {
         <Blogs
           blogs={currentblogs}
           key={currentblogs._id}
+          route={this.props.history}
           deleteBlog={this.props.deleteBlog}
         />
       );
@@ -49,12 +49,18 @@ export default class AdminBlog extends Component {
           Yazılar
         </h2>
         <div className="container d-flex justify-content-center align-items-center mt-3 mb-4">
-          <a href="/adminDashboard" className="btn btn-warning  btn-lg ">
+          <button
+            onClick={() => this.props.history.push("/adminDashboard")}
+            className="btn btn-warning  btn-lg "
+          >
             Geri Dön
-          </a>{" "}
-          <Link to="/adminBlogNew" className="btn btn-warning  btn-lg m-3">
+          </button>{" "}
+          <a
+            onClick={() => this.props.history.push("/adminBlogNew")}
+            className="btn btn-warning  btn-lg m-3"
+          >
             Yazı Ekle
-          </Link>
+          </a>
         </div>
 
         <table className="table">

@@ -2,11 +2,12 @@ import React, { Component } from "react";
 import { CKEditor } from "@ckeditor/ckeditor5-react";
 import ClassicEditor from "@ckeditor/ckeditor5-build-classic";
 import axios from "axios";
+import FileBase64 from "react-file-base64";
 
 const getBlogId = window.location.pathname.split("/");
 const blogId = getBlogId[2];
 let ckData = "";
-
+let imagePath = "";
 export default class AdminNewUsers extends Component {
   constructor(props) {
     super(props);
@@ -42,10 +43,14 @@ export default class AdminNewUsers extends Component {
           shortCut: response.data.shortCut,
           blog: response.data.blog,
         });
+        imagePath = response.data.blog_image;
       })
       .catch(function (error) {
         console.log(error);
       });
+  }
+  getFiles(files) {
+    imagePath = files;
   }
 
   onChangeTitle(e) {
@@ -86,11 +91,13 @@ export default class AdminNewUsers extends Component {
     let date = new Date();
     let currentDate = `${date.getDate()}.${
       date.getMonth() + 1
-    }.${date.getFullYear()}   ${date.getHours()}.${date.getMinutes()}`;
+    }.${date.getFullYear()}   ${date.getHours()}.${
+      date.getMinutes() < 10 ? "0" : "" + date.getMinutes()
+    }`;
     const blog1 = {
       title: document.getElementById("title").value,
       subtitle: document.getElementById("subtitle").value,
-      blog_image: document.getElementById("blog_image").value,
+      blog_image: imagePath,
       createdAt: this.state.createdAt,
       updatedAt: String(currentDate),
       shortCut: document.getElementById("shortCut").value,
@@ -104,7 +111,7 @@ export default class AdminNewUsers extends Component {
         blog1
       )
       .then(
-        (res) => (window.location = "/adminBlog"),
+        (res) => window.open("/adminBlog", "_self"),
         alert("Yazı başarıyla güncellendi")
       )
       .catch((err) => console.log(err));
@@ -114,7 +121,7 @@ export default class AdminNewUsers extends Component {
       <div className="container mt-5">
         <div className="container d-flex justify-content-center align-items-center column mb-5">
           <a
-            href="/adminBlog"
+            onClick={() => this.props.history.push("/adminBlog")}
             className="  btn btn-warning  btn-lg m-5 mt-0 mb-0"
           >
             Geri Dön
@@ -148,14 +155,8 @@ export default class AdminNewUsers extends Component {
           </div>
           <div className="form-group">
             <label className="mb-1">Yazı Fotoğraf</label>
-            <input
-              type="text"
-              className="form-control"
-              id="blog_image"
-              value={this.state.blog_image}
-              onChange={this.onChangeBlogImage}
-              placeholder="Yazı Fotoğraf Yolunu Giriniz"
-            />
+            <br />
+            <FileBase64 multiple={false} onDone={this.getFiles.bind(this)} />
           </div>
           <div className="form-group">
             <label className="mb-1">Kısa Yazı</label>
@@ -182,7 +183,13 @@ export default class AdminNewUsers extends Component {
               }}
             />
           </div>
-          <p className="btn btn-warning mb-2 mt-5" onClick={this.onSubmit}>
+          <p
+            className="btn btn-warning mb-2 mt-5"
+            onClick={(e) => {
+              this.onSubmit(e);
+              this.props.history.push("/adminBlog");
+            }}
+          >
             Yazı Güncelle
           </p>
         </form>

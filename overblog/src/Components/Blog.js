@@ -8,7 +8,7 @@ export default class Blog extends Component {
           <a className="postcard__img_link" href="/blogDetail">
             <img
               className="postcard__img"
-              src={currentblogs.blog_image}
+              src={currentblogs.blog_image.base64}
               alt="blogImage"
             />
           </a>

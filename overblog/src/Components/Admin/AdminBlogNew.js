@@ -2,41 +2,22 @@ import React, { Component } from "react";
 import { CKEditor } from "@ckeditor/ckeditor5-react";
 import ClassicEditor from "@ckeditor/ckeditor5-build-classic";
 import axios from "axios";
+import FileBase64 from "react-file-base64";
 
 let ckData = "";
-
+let imagePath = "";
 export default class AdminNewUsers extends Component {
-  handleSubmit(data) {
-    let date = new Date();
-    let currentDate = `${date.getDate()}.${
-      date.getMonth() + 1
-    }.${date.getFullYear()}   ${date.getHours()}.${date.getMinutes()}`;
-    const newBlog = {
-      title: document.getElementById("title").value,
-      subtitle: document.getElementById("subtitle").value,
-      blog_image: document.getElementById("blog_image").value,
-      createdAt: String(currentDate),
-      updatedAt: String(currentDate),
-      shortcut: document.getElementById("shortcut").value,
-      blog: ckData,
-    };
-    console.log(newBlog);
-    axios
-      .post(
-        "https://kuskulu-backend.herokuapp.com/admin/blogs/newBlog",
-        newBlog
-      )
-      .then((res) => console.log(res.data))
-      .catch((err) => console.log("Hata: " + err));
+  getFiles(files) {
+    imagePath = files;
   }
   render() {
-    let date = new Date(Date.now());
-    console.log(date);
     return (
       <div className="container mt-5">
         <div className="container d-flex justify-content-center align-items-center column mb-5">
           <a
-            href="/adminBlog"
+            onClick={() => {
+              this.props.history.push("/adminBlog");
+            }}
             className="  btn btn-warning  btn-lg m-5 mt-0 mb-0"
           >
             Geri Dön
@@ -66,17 +47,12 @@ export default class AdminNewUsers extends Component {
           </div>
           <div className="form-group">
             <label className="mb-1">Yazı Fotoğraf</label>
-            <input
-              type="text"
-              className="form-control"
-              id="blog_image"
-              placeholder="Yazı Fotoğraf Yolunu Giriniz"
-            />
+            <FileBase64 multiple={false} onDone={this.getFiles.bind(this)} />
           </div>
           <div className="form-group">
             <label className="mb-1">Kısa Yazı</label>
             <input
-              type="email"
+              type="text"
               className="form-control"
               id="shortcut"
               placeholder="Kısa Yazı Giriniz"
@@ -98,13 +74,37 @@ export default class AdminNewUsers extends Component {
               // }}
             />
           </div>
-          <a
-            href="/adminBlog"
+          <button
             className="btn btn-warning mb-2 mt-5"
-            onClick={this.handleSubmit}
+            onClick={() => {
+              let date = new Date();
+              let currentDate = `${date.getDate()}.${
+                date.getMonth() + 1
+              }.${date.getFullYear()}   ${date.getHours()}.${
+                date.getMinutes() < 10 ? "0" : "" + date.getMinutes()
+              }`;
+              const newBlog = {
+                title: document.getElementById("title").value,
+                subtitle: document.getElementById("subtitle").value,
+                blog_image: imagePath,
+                createdAt: String(currentDate),
+                updatedAt: String(currentDate),
+                shortcut: document.getElementById("shortcut").value,
+                blog: ckData,
+              };
+              console.log(newBlog);
+              axios
+                .post(
+                  "https://kuskulu-backend.herokuapp.com/admin/blogs/newBlog",
+                  newBlog
+                )
+                .then((res) => console.log(res))
+                .catch((err) => console.log("Hata: " + err));
+              this.props.history.push("/adminBlog");
+            }}
           >
             Yazı Ekle
-          </a>
+          </button>
         </form>
       </div>
     );

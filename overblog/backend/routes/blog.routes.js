@@ -13,6 +13,7 @@ router.route("/newBlog").post((req, res) => {
   const blog_image = req.body.blog_image;
   const shortCut = req.body.shortcut;
   const createdAt = req.body.createdAt;
+  const updatedAt = req.body.updatedAt;
   const blog = req.body.blog;
 
   const newBlog = new Blog({
@@ -20,6 +21,7 @@ router.route("/newBlog").post((req, res) => {
     subtitle,
     blog_image,
     createdAt,
+    updatedAt,
     shortCut,
     blog,
   });
@@ -49,6 +51,7 @@ router.route("/updateBlog/:id").post((req, res) => {
       Blog.subtitle = req.body.subtitle;
       Blog.blog_image = req.body.blog_image;
       Blog.createdAt = req.body.createdAt;
+      Blog.updatedAt = req.body.updatedAt;
       Blog.shortCut = req.body.shortCut;
       Blog.blog = req.body.blog;
 

@@ -6,7 +6,7 @@ const Blogs = (props) => (
       <img
         className="postcard__img"
         // src="https://picsum.photos/501/500"
-        src={props.blogs.blog_image}
+        src={props.blogs.blog_image.base64}
         alt="blogImage"
       />
     </a>
