@@ -34,6 +34,7 @@ const NavBar = (props) => {
             width="17.5%"
             id="navigationBarLogo"
           />
+
           <button
             type="button"
             className="navbar-toggler"
@@ -43,7 +44,7 @@ const NavBar = (props) => {
             <span className="navbar-toggler-icon"></span>
           </button>
           <div className="collapse navbar-collapse" id="navbarCollapse">
-            <div className="navbar-nav d-flex ml-auto">
+            <div className="navbar-nav d-flex ml-auto navbarLink">
               <a href="/">Anasayfa</a>
               <a href="/about">Hakkımda</a>
               <a href="/blog">Yazılar</a>

@@ -121,7 +121,7 @@ export default class AdminNewUsers extends Component {
       <div className="container mt-5">
         <div className="container d-flex justify-content-center align-items-center column mb-5">
           <a
-            onClick={() => this.props.history.push("/adminBlog")}
+            href="/adminBlog"
             className="  btn btn-warning  btn-lg m-5 mt-0 mb-0"
           >
             Geri Dön
@@ -183,13 +183,7 @@ export default class AdminNewUsers extends Component {
               }}
             />
           </div>
-          <p
-            className="btn btn-warning mb-2 mt-5"
-            onClick={(e) => {
-              this.onSubmit(e);
-              this.props.history.push("/adminBlog");
-            }}
-          >
+          <p className="btn btn-warning mb-2 mt-5" onClick={this.onSubmit}>
             Yazı Güncelle
           </p>
         </form>

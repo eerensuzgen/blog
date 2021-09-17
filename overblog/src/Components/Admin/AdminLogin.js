@@ -1,7 +1,20 @@
 import React, { Component } from "react";
-import auth from "../Admin/auth";
 
 export default class AdminLogin extends Component {
+  handleSubmit = () => {
+    if (
+      this.props.admins[0].username ===
+        document.getElementById("userName").value &&
+      this.props.admins[0].password ===
+        document.getElementById("userPassword").value
+    ) {
+      alert("Giriş Başarılı");
+      window.open("/adminDashboard", "_self");
+    } else {
+      alert("Kullanıcı adı veya şifre hatalı!");
+      window.open("/admin", "_self");
+    }
+  };
   render() {
     return (
       <div className="container-fluid ps-md-0 min-vh-100 d-flex justify-content-center align-items-center">
@@ -34,31 +47,12 @@ export default class AdminLogin extends Component {
                         />
                         <label>Şifre</label>
                       </div>
-                      <button
-                        type="btn"
+                      <a
                         className="btn btn-outline-danger btn-lg btn-block"
-                        onClick={() => {
-                          this.props.admins.forEach((currentusers) => {
-                            if (
-                              currentusers.username ===
-                                document.getElementById("userName").value &&
-                              currentusers.password ===
-                                document.getElementById("userPassword").value
-                            ) {
-                              auth.login(() => {
-                                alert("Giriş Başarılı");
-                                this.props.history.push("/adminDashboard");
-                              });
-                            } else {
-                              alert("Kullanıcı adı veya şifre hatalı!");
-
-                              window.open("/admin", "_self");
-                            }
-                          });
-                        }}
+                        onClick={this.handleSubmit}
                       >
                         Giriş Yap
-                      </button>
+                      </a>
 
                       <div className="d-grid"></div>
                     </form>

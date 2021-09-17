@@ -217,3 +217,10 @@
     );
   }
 }
+
+/**/
+@media only screen and (max-width: 1025px) and (min-width: 750px) {
+  .blogImage {
+    width: 1rem;
+  }
+}

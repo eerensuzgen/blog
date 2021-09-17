@@ -9,7 +9,12 @@ export default class About extends Component {
         <hr className="aboutHr" />
         <div className="aboutBioBlock">
           {" "}
-          <img src="./img/pp.jpg" alt="profilePhoto" id="aboutImage" />
+          <img
+            src="./img/pp.jpg"
+            alt="profilePhoto"
+            id="aboutImage"
+            className="aboutImage1"
+          />
           <p className="aboutBioText">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu
             purus non velit vestibulum accumsan. Quisque id tortor eu lectus

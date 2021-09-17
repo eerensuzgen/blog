@@ -12,7 +12,7 @@ const Blogs = (props) => (
     </a>
     <div className="postcard__text t-dark">
       <h1 className="postcard__title blue">
-        <a href="/blogDetail">{props.blogs.title}</a>
+        <a href={"/blogDetail/" + props.blogs._id}>{props.blogs.title}</a>
       </h1>
       <div className="postcard__subtitle small">
         <time dateTime="2020-05-25 12:00:00">

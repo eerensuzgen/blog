@@ -20,12 +20,12 @@ a {
   transition: color 0.3s ease-in-out;
 }
 a:hover {
-  color: #e50914;
+  color: #343434;
   text-decoration: none;
   transition: color 0.2s;
 }
 .pageDiv {
-  margin-top: 80px;
+  margin-top: 110px;
 }
 
 /* About Section */
@@ -89,9 +89,31 @@ a:hover {
   text-align: center;
   padding-bottom: 4%;
 }
-@media (max-width: 960px) {
+@media only screen and (max-width: 1025px) and (min-width: 750px) {
   #aboutImage {
+    height: 70vh;
+    object-fit: cover;
+    object-position: bottom;
     margin-bottom: 5%;
+  }
+  .aboutImage {
+    object-fit: cover;
+    object-position: bottom;
+  }
+  .aboutBioBlock {
+    flex-direction: column;
+  }
+}
+@media (max-width: 750px) {
+  #aboutImage {
+    height: 60vh;
+    object-fit: cover;
+    object-position: bottom;
+    margin-bottom: 5%;
+  }
+  .aboutImage {
+    object-fit: cover;
+    object-position: bottom;
   }
   #aboutSchoolImage {
     width: 80%;
@@ -120,7 +142,7 @@ a:hover {
   font-weight: 400;
   text-transform: uppercase;
   text-decoration: none;
-  color: blue;
+  color: #343434;
   margin: 0 8px;
   font-size: 16px;
   letter-spacing: 1px;
@@ -141,25 +163,35 @@ nav a:before {
   animation: out 0.2s cubic-bezier(1, 0, 0.58, 0.97) 1 both;
 }
 
+#navigationBarLogo {
+  margin-left: 5%;
+  width: 25%;
+}
+.navbarLink {
+  margin-right: 9%;
+}
+
 nav a:hover:before {
   animation: in 0.2s cubic-bezier(1, 0, 0.58, 0.97) 1 both;
 }
-@media (max-width: 960px) and (min-width: 750px) {
+@media (max-width: 1100px) and (min-width: 750px) {
   #navigationBarLogo {
-    width: 30%;
+    width: 40%;
   }
 }
 @media (max-width: 750px) {
   .navigationBar {
     background-color: #f3f5f7;
-    color: blue;
+    color: #343434;
   }
   .navigationBar a {
     text-align: center;
     margin: 12px 8px 8px;
   }
   #navigationBarLogo {
-    width: 50%;
+    margin-left: 0%;
+
+    width: 75%;
   }
 }
 
@@ -197,6 +229,7 @@ nav a:hover:before {
     transform: translateY(0);
   }
 }
+
 nav a:nth-child(1) {
   animation: show 0.2s 0.5s ease 1 both;
 }
@@ -253,7 +286,6 @@ footer {
 }
 
 /* InfoAbout Section */
-
 .infoAbout {
   background-color: #f3f5f7;
   display: flex;
@@ -266,14 +298,15 @@ footer {
 }
 .infoAboutTitle {
   font-weight: bold;
-  font-size: 50px;
+  font-size: 60px;
+  letter-spacing: 3px;
 }
 .infoAboutText {
   margin-left: 8%;
   margin-right: 15%;
 }
 #pp {
-  width: 17%;
+  width: 20%;
   border-radius: 100%;
 }
 .infoAboutButton {
@@ -282,7 +315,9 @@ footer {
   color: #000000;
 }
 .infoAboutResume {
-  font-size: medium;
+  font-size: 1.3rem;
+  letter-spacing: 1.5px;
+  font-weight: 400;
 }
 @media (max-width: 960px) {
   .infoAbout {
@@ -290,41 +325,73 @@ footer {
     display: flex;
     flex-direction: column;
     padding: 0;
+    margin-top: 5rem;
   }
   .infoAboutTitle {
     text-align: center;
-    font-size: 35 px;
+    font-size: 50px;
   }
   #pp {
     display: flex;
     margin: auto;
     margin-bottom: 5%;
-    width: 50%;
+    width: 60%;
     border-radius: 100%;
   }
   .infoAboutText {
     margin: 5%;
   }
 }
-/*   */
-
-.shortBlogTitle {
-  text-align: center;
-  font-weight: bold;
-  padding-bottom: 2%;
-  font-size: 50px;
-}
-
-.shortBlogLink {
-  font-weight: bold;
-  margin-top: 5%;
-  margin-bottom: 4%;
+/* 
+.infoAbout {
+  background-color: #f3f5f7;
   display: flex;
+  flex-direction: row;
+  padding-left: 15%;
+  padding-top: 8.5%;
+  padding-bottom: 8.5%;
   justify-content: center;
-  color: #000000;
   align-items: center;
-  font-size: 30px;
 }
+
+#pp {
+  width: 20%;
+  border-radius: 100%;
+}
+.infoAboutTitle {
+  letter-spacing: 3px;
+  font-weight: bold;
+  font-size: 60px;
+}
+.infoAboutBlock {
+  margin-left: 8%;
+  margin-right: 15%;
+}
+.infoAboutButton {
+  font-weight: 600;
+  font-size: 20px;
+  color: #000000;
+}
+.infoAboutResume {
+  font-size: 18px;
+  letter-spacing: 1.5px;
+  font-weight: 400;
+  margin-bottom: 3%;
+}
+.aq {
+  display: flex;
+  flex-direction: column;
+}
+@media (max-width: 960px) {
+  .infoAbout {
+    padding: 0;
+  }
+  #pp {
+    width: 75%;
+  }
+  .infoAboutBlock {
+  }
+} */
 
 /* NotFound Section */
 
@@ -393,30 +460,79 @@ footer {
 }
 @media only screen and (max-width: 1025px) and (min-width: 960px) {
   .blogDetail {
-    text-align: center;
+    text-align: left;
     font-size: 50px;
     padding: 15%;
     background: #f3f5f7;
   }
   .blogDetailImage {
-    width: 40rem;
+    width: 45rem;
     height: 35vh;
     margin-top: 2rem;
     margin-bottom: 2rem;
   }
 }
-@media (max-width: 960px) {
+@media only screen and (max-width: 960px) and (min-width: 750px) {
   .blogDetail {
-    text-align: center;
+    text-align: left;
     font-size: 50px;
     padding: 15%;
     background: #f3f5f7;
   }
   .blogDetailImage {
-    width: 15rem;
+    width: 35rem;
+    height: 35vh;
+    margin-top: 2rem;
+    display: flex;
+
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2rem;
+  }
+  .blogDetail1 {
+    text-align: left;
+  }
+}
+@media only screen and (max-width: 750px) and (min-width: 370px) {
+  .blogDetail {
+    text-align: left;
+    font-size: 50px;
+    padding: 15%;
+    background: #f3f5f7;
+  }
+  .blogDetailImage {
+    width: 17rem;
     height: 25vh;
     margin-top: 2rem;
     margin-bottom: 2rem;
+    display: flex;
+
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .blogDetail1 {
+    text-align: left;
+  }
+}
+@media (max-width: 370px) {
+  .blogDetail {
+    text-align: left;
+    font-size: 50px;
+    padding: 15%;
+    background: #f3f5f7;
+  }
+  .blogDetailImage {
+    width: 14.5rem;
+    height: 25vh;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    display: flex;
+
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .blogDetail1 {
+    text-align: left;
   }
 }
 
@@ -463,7 +579,7 @@ footer {
     position: relative;
     text-transform: uppercase;
     text-shadow: -15px 5px 20px rgb(66, 66, 66);
-    color: blue;
+    color: #343434;
     letter-spacing: -0.05em;
     font-family: "Anton", Arial, sans-serif;
     user-select: none;
@@ -475,8 +591,54 @@ footer {
 
 /**/
 .adminIcon {
-  color: blue;
+  color: #343434;
 }
 .adminIcon:hover {
-  color: red;
+  color: black;
+}
+
+/**/
+.startOverBlog {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  margin-top: 18vh;
+}
+.startImageBox {
+  object-fit: cover;
+  object-position: bottom;
+  width: 110vh;
+  height: 75vh;
+}
+@media only screen and (max-width: 1025px) and (min-width: 750px) {
+  .startOverBlog {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    width: 80vw;
+    text-align: center;
+    margin-top: 11vh;
+  }
+  .startImageBox {
+    margin-bottom: 0%;
+    width: 50vw;
+    height: 40vh;
+  }
+}
+@media (max-width: 750px) {
+  .startOverBlog {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    width: 80vw;
+    text-align: center;
+    margin-top: 12vh;
+  }
+  .startImageBox {
+    width: 80vw;
+    height: 55vh;
+  }
 }

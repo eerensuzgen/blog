@@ -17,26 +17,17 @@ export default class AdminDashboard extends Component {
         </div>
         <br />
         <div className="container d-flex justify-content-center align-items-center flex-column ">
-          <button
+          <a
             className="btn btn-danger col-md-2 mt-3 btn-lg"
-            onClick={() => {
-              this.props.history.push("/adminBlog");
-            }}
+            href="/adminBlog"
             className="btn btn-warning col-md-2 mt-3 btn-lg"
           >
             Yazılarım
-          </button>
+          </a>
 
-          <button
-            className="btn btn-danger col-md-2 mt-3 btn-lg"
-            onClick={() => {
-              auth.logout(() => {
-                this.props.history.push("/admin");
-              });
-            }}
-          >
+          <a className="btn btn-danger col-md-2 mt-3 btn-lg" href="/admin">
             Çıkış Yap
-          </button>
+          </a>
         </div>
       </div>
     );

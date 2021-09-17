@@ -2,7 +2,7 @@ import React, { Component } from "react";
 
 export default class Blog extends Component {
   blogsList() {
-    return this.props.blogs.map((currentblogs) => {
+    return this.props.blogs.reverse().map((currentblogs) => {
       return (
         <article className="postcard light blue">
           <a className="postcard__img_link" href="/blogDetail">

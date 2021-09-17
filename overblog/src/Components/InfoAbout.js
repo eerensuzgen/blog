@@ -17,7 +17,8 @@ export default class InfoAbout extends Component {
             karalamalarıma yansıtmaya çalışıyorum.
           </p>
           <a href="/about" className="infoAboutButton">
-            Detaylı bilgi için tıklayınız.
+            <i class="fa fa-arrow-right"></i>&nbsp;Detaylı bilgi için
+            tıklayınız.
           </a>
         </div>
       </div>

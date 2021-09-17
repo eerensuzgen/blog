@@ -103,14 +103,13 @@ class App extends Component {
             render={(props) => (
               <AdminLogin
                 {...props}
-                isAuth={this.isAuth}
-                getAdminsDataFromDatabase={this.getAdminsDataFromDatabase}
                 admins={this.state.admins}
+                getAdminsDataFromDatabase={this.getAdminsDataFromDatabase}
               />
             )}
           />
-          <ProtectedRoute path="/adminDashboard" component={AdminDashboard} />
-          <ProtectedRoute
+          <Route path="/adminDashboard" component={AdminDashboard} />
+          <Route
             path="/adminBlog"
             component={(props) => (
               <AdminBlog
@@ -121,8 +120,8 @@ class App extends Component {
               />
             )}
           />
-          <ProtectedRoute path="/adminBlogNew" component={AdminBlogNew} />
-          <ProtectedRoute path="/adminBlogEdit" component={AdminBlogEdit} />
+          <Route path="/adminBlogNew" component={AdminBlogNew} />
+          <Route path="/adminBlogEdit" component={AdminBlogEdit} />
           <Route component={NotFound} />
         </Switch>
         <Footer />

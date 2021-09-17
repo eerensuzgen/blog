@@ -10,14 +10,37 @@ export default class AdminNewUsers extends Component {
   getFiles(files) {
     imagePath = files;
   }
+  handleSubmit = () => {
+    let date = new Date();
+    let currentDate = `${date.getDate()}.${
+      date.getMonth() + 1
+    }.${date.getFullYear()}   ${date.getHours()}.${
+      date.getMinutes() < 10 ? "0" : "" + date.getMinutes()
+    }`;
+    const newBlog = {
+      title: document.getElementById("title").value,
+      subtitle: document.getElementById("subtitle").value,
+      blog_image: imagePath,
+      createdAt: String(currentDate),
+      updatedAt: String(currentDate),
+      shortcut: document.getElementById("shortcut").value,
+      blog: ckData,
+    };
+    console.log(newBlog);
+    axios
+      .post(
+        "https://kuskulu-backend.herokuapp.com/admin/blogs/newBlog",
+        newBlog
+      )
+      .then((res) => window.open("/adminBlog", "_self"))
+      .catch((err) => console.log("Hata: " + err));
+  };
   render() {
     return (
       <div className="container mt-5">
         <div className="container d-flex justify-content-center align-items-center column mb-5">
           <a
-            onClick={() => {
-              this.props.history.push("/adminBlog");
-            }}
+            href="/adminBlog"
             className="  btn btn-warning  btn-lg m-5 mt-0 mb-0"
           >
             Geri Dön
@@ -74,37 +97,9 @@ export default class AdminNewUsers extends Component {
               // }}
             />
           </div>
-          <button
-            className="btn btn-warning mb-2 mt-5"
-            onClick={() => {
-              let date = new Date();
-              let currentDate = `${date.getDate()}.${
-                date.getMonth() + 1
-              }.${date.getFullYear()}   ${date.getHours()}.${
-                date.getMinutes() < 10 ? "0" : "" + date.getMinutes()
-              }`;
-              const newBlog = {
-                title: document.getElementById("title").value,
-                subtitle: document.getElementById("subtitle").value,
-                blog_image: imagePath,
-                createdAt: String(currentDate),
-                updatedAt: String(currentDate),
-                shortcut: document.getElementById("shortcut").value,
-                blog: ckData,
-              };
-              console.log(newBlog);
-              axios
-                .post(
-                  "https://kuskulu-backend.herokuapp.com/admin/blogs/newBlog",
-                  newBlog
-                )
-                .then((res) => console.log(res))
-                .catch((err) => console.log("Hata: " + err));
-              this.props.history.push("/adminBlog");
-            }}
-          >
+          <a className="btn btn-warning mb-2 mt-5" onClick={this.handleSubmit}>
             Yazı Ekle
-          </button>
+          </a>
         </form>
       </div>
     );
