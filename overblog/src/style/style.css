@@ -607,7 +607,8 @@ footer {
 }
 .startImageBox {
   object-fit: cover;
-  object-position: bottom;
+  object-position: center;
+
   width: 110vh;
   height: 75vh;
 }
