@@ -92,7 +92,7 @@ export default class AdminNewUsers extends Component {
     let currentDate = `${date.getDate()}.${
       date.getMonth() + 1
     }.${date.getFullYear()}   ${date.getHours()}.${
-      date.getMinutes() < 10 ? "0" : "" + date.getMinutes()
+      date.getMinutes() < 10 ? "0" + date.getMinutes() : "" + date.getMinutes()
     }`;
     const blog1 = {
       title: document.getElementById("title").value,

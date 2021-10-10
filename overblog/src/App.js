@@ -63,41 +63,70 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Nav />
         <Switch>
           <Route
             exact
             path="/"
             render={(props) => (
-              <HomePage
-                {...props}
-                blogs={this.state.blogs}
-                getData={this.getBlogsDataFromDatabase}
-              />
+              <div>
+                <Nav />
+                <HomePage
+                  {...props}
+                  blogs={this.state.blogs}
+                  getData={this.getBlogsDataFromDatabase}
+                />
+                <Footer />
+              </div>
             )}
           />
-          <Route path="/about" component={About} />
+          <Route
+            path="/about"
+            render={() => (
+              <div>
+                <Nav />
+                <About />
+                <Footer />
+              </div>
+            )}
+          />{" "}
           <Route
             path="/blog"
             render={(props) => (
-              <Blog
-                {...props}
-                blogs={this.state.blogs}
-                getData={this.getBlogsDataFromDatabase}
-              />
+              <div>
+                <Nav />
+                <Blog
+                  {...props}
+                  blogs={this.state.blogs}
+                  getData={this.getBlogsDataFromDatabase}
+                />
+                <Footer />
+              </div>
             )}
           />
           <Route
             path="/blogDetail/"
             render={(props) => (
-              <BlogDetail
-                {...props}
-                blogs={this.state.blogs}
-                getData={this.getBlogsDataFromDatabase}
-              />
+              <div>
+                <Nav />
+                <BlogDetail
+                  {...props}
+                  blogs={this.state.blogs}
+                  getData={this.getBlogsDataFromDatabase}
+                />
+                <Footer />
+              </div>
             )}
           />
-          <Route path="/contact" component={Contact} />
+          <Route
+            path="/contact"
+            render={(props) => (
+              <div>
+                <Nav />
+                <Contact />
+                <Footer />
+              </div>
+            )}
+          />
           <Route
             path="/admin"
             render={(props) => (
@@ -124,7 +153,6 @@ class App extends Component {
           <Route path="/adminBlogEdit" component={AdminBlogEdit} />
           <Route component={NotFound} />
         </Switch>
-        <Footer />
       </div>
     );
   }

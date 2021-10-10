@@ -25,7 +25,7 @@ export default class AdminDashboard extends Component {
             Yazılarım
           </a>
 
-          <a className="btn btn-danger col-md-2 mt-3 btn-lg" href="/admin">
+          <a className="btn btn-danger col-md-2 mt-3 btn-lg" href="/">
             Çıkış Yap
           </a>
         </div>

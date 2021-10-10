@@ -29,7 +29,7 @@ const NavBar = (props) => {
           id="navigation"
         >
           <img
-            src="/img/logoRed.png"
+            src="/img/logo.png"
             alt="logo"
             width="17.5%"
             id="navigationBarLogo"

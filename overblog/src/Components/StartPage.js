@@ -21,13 +21,15 @@ export default class StartPage extends Component {
             color: "#343434",
           }}
         >
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
           <span
             className="display-6"
             style={{ marginLeft: "2%", fontWeight: "lighter" }}
           >
+            Uçaklar süzülüyor gökle boyadığım <br />
+            Büyük, çok Büyük
             <br />
-            Fusce eget rutrum est.
+            Gazete kâğıtlarından yaptığım <br />
+            Çocukluğumda.
           </span>
         </div>
       </div>

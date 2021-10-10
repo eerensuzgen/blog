@@ -184,7 +184,7 @@
   color: #0076bd;
 }
 .blue .postcard__bar {
-  background-color: #e50914;
+  background-color: #343434;
 }
 .blue::before {
   background-image: linear-gradient(
