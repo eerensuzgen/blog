@@ -19,6 +19,20 @@ const Blogs = (props) => (
       >
         {props.blogs.title}
       </h1>
+      <div style={{ fontSize: "1.2rem" }}>
+        <time dateTime="2020-05-25 12:00:00">
+          <small>
+            {props.blogs.createdAt === props.blogs.updatedAt ? (
+              <em> Oluşturma tarihi :{props.blogs.createdAt}</em>
+            ) : (
+              <em>
+                Oluşturma tarihi : {props.blogs.createdAt} &nbsp;&nbsp;&nbsp;
+                Güncelleme Tarihi : {props.blogs.updatedAt}
+              </em>
+            )}
+          </small>
+        </time>
+      </div>
       <h4
         className="postcard__title blue"
         style={{
@@ -45,20 +59,6 @@ const Blogs = (props) => (
       </div>
     </div>
     <br />
-    <div style={{ fontSize: "1.2rem" }}>
-      <time dateTime="2020-05-25 12:00:00">
-        <small>
-          {props.blogs.createdAt === props.blogs.updatedAt ? (
-            <em> Oluşturma tarihi :{props.blogs.createdAt}</em>
-          ) : (
-            <em>
-              Oluşturma tarihi : {props.blogs.createdAt} &nbsp;&nbsp;&nbsp;
-              Güncelleme Tarihi : {props.blogs.updatedAt}
-            </em>
-          )}
-        </small>
-      </time>
-    </div>
   </article>
 );
 

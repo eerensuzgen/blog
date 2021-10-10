@@ -57,8 +57,7 @@ export default class About extends Component {
           <hr className="aboutHr" />
           <img src="./img/aü.jpg" alt="schoolImage" id="aboutSchoolImage" />
           <h1 className="aboutSchoolTitle">
-            Ankara Üniversitesi -
-            <span className="aboutSchoolSpan"> Gazetecilik</span>
+            Ankara Üniversitesi İletişim Fakültesi - Gazetecilik
           </h1>
           <h6 className="aboutSchoolDate">2019 - Devam ediyor</h6>
           <img

@@ -53,7 +53,7 @@ export default class ShortBlog extends Component {
         <section className="light">
           <div className="container py-2">
             <div className="h1 text-center text-dark" id="pageHeaderTitle">
-              Yazılar
+              Güncel Yazılar
             </div>
             {this.blogsList()}
           </div>
