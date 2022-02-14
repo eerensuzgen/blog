@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import auth from "../Admin/auth";
 
 export default class AdminDashboard extends Component {
   render() {
@@ -17,11 +16,7 @@ export default class AdminDashboard extends Component {
         </div>
         <br />
         <div className="container d-flex justify-content-center align-items-center flex-column ">
-          <a
-            className="btn btn-danger col-md-2 mt-3 btn-lg"
-            href="/adminBlog"
-            className="btn btn-warning col-md-2 mt-3 btn-lg"
-          >
+          <a href="/adminBlog" className="btn btn-warning col-md-2 mt-3 btn-lg">
             Yazılarım
           </a>
 

@@ -15,7 +15,6 @@ import AdminBlog from "./Components/Admin/AdminBlog";
 import AdminBlogNew from "./Components/Admin/AdminBlogNew";
 import AdminBlogEdit from "./Components/Admin/AdminBlogEdit";
 import axios from "axios";
-import { ProtectedRoute } from "./Components/Admin/protectedRoute";
 
 class App extends Component {
   constructor(props) {

@@ -21,10 +21,7 @@ export default class StartPage extends Component {
             color: "#343434",
           }}
         >
-          <span
-            className="display-6"
-            style={{ marginLeft: "2%", fontWeight: "lighter" }}
-          >
+          <span className="display-6">
             Uçaklar süzülüyor gökle boyadığım <br />
             Büyük, çok Büyük
             <br />

@@ -1,14 +1,17 @@
 import React, { Component } from "react";
-
+import ReactPlayer from "react-player";
 const Blogs = (props) => (
   <article className="postcard light blue">
     <a className="postcard__img_link" href="/blogDetail">
-      <img
-        className="postcard__img"
-        // src="https://picsum.photos/501/500"
-        src={props.blogs.blog_image.base64}
-        alt="blogImage"
-      />
+      {props.blogs.blogVideo === "" ? (
+        <img
+          className="postcard__img"
+          src={props.blogs.blog_image.base64}
+          alt="blogImage"
+        />
+      ) : (
+        <ReactPlayer url={props.blogs.blogVideo} />
+      )}
     </a>
     <div className="postcard__text t-dark">
       <h1 className="postcard__title blue">

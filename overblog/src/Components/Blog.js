@@ -1,16 +1,20 @@
 import React, { Component } from "react";
-
+import ReactPlayer from "react-player";
 export default class Blog extends Component {
   blogsList() {
     return this.props.blogs.reverse().map((currentblogs) => {
       return (
         <article className="postcard light blue">
           <a className="postcard__img_link" href="/blogDetail">
-            <img
-              className="postcard__img"
-              src={currentblogs.blog_image.base64}
-              alt="blogImage"
-            />
+            {currentblogs.blogVideo === "" ? (
+              <img
+                className="postcard__img"
+                src={currentblogs.blog_image.base64}
+                alt="blogImage"
+              />
+            ) : (
+              <ReactPlayer url={currentblogs.blogVideo} />
+            )}
           </a>
           <div className="postcard__text t-dark">
             <h1 className="postcard__title blue">

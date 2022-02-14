@@ -23,6 +23,9 @@ const BlogSchema = new Schema({
     type: String,
     required: "Boş Bırakılamaz",
   },
+  blogVideo: {
+    type: String,
+  },
 });
 
 module.exports = mongoose.model("Blog", BlogSchema);

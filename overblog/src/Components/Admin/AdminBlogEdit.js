@@ -18,6 +18,7 @@ export default class AdminNewUsers extends Component {
     this.onChangeShortcut = this.onChangeShortcut.bind(this);
     this.onChangeBlog = this.onChangeBlog.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
+    this.onChangeBlogVideo = this.onChangeBlogVideo.bind(this);
 
     this.state = {
       title: "",
@@ -27,6 +28,7 @@ export default class AdminNewUsers extends Component {
       blog_image: "",
       shortCut: "",
       blog: "",
+      blogVideo: "",
     };
   }
 
@@ -42,6 +44,7 @@ export default class AdminNewUsers extends Component {
           updatedAt: response.data.updatedAt,
           shortCut: response.data.shortCut,
           blog: response.data.blog,
+          blogVideo: response.data.blogVideo,
         });
         imagePath = response.data.blog_image;
       })
@@ -75,6 +78,11 @@ export default class AdminNewUsers extends Component {
       blog_image: e.target.value,
     });
   }
+  onChangeBlogVideo(e) {
+    this.setState({
+      blogVideo: e.target.value,
+    });
+  }
   onChangeBlog(e) {
     this.setState({
       blog: e.target.value,
@@ -89,9 +97,15 @@ export default class AdminNewUsers extends Component {
   onSubmit(e) {
     e.preventDefault();
     let date = new Date();
-    let currentDate = `${date.getDate()}.${
-      date.getMonth() + 1
-    }.${date.getFullYear()}   ${date.getHours()}.${
+    let currentDate = `${
+      date.getDate() < 10 ? "0" + date.getDate() : "" + date.getDate()
+    }.${
+      date.getMonth() + 1 < 10
+        ? "0" + (date.getMonth() + 1)
+        : "" + (date.getMonth() + 1)
+    }.${date.getFullYear()}   ${
+      date.getHours() < 10 ? "0" + date.getHours() : "" + date.getHours()
+    }.${
       date.getMinutes() < 10 ? "0" + date.getMinutes() : "" + date.getMinutes()
     }`;
     const blog1 = {
@@ -102,6 +116,7 @@ export default class AdminNewUsers extends Component {
       updatedAt: String(currentDate),
       shortCut: document.getElementById("shortCut").value,
       blog: ckData,
+      blogVideo: document.getElementById("blogVideo").value,
     };
 
     axios
@@ -157,6 +172,17 @@ export default class AdminNewUsers extends Component {
             <label className="mb-1">Yazı Fotoğraf</label>
             <br />
             <FileBase64 multiple={false} onDone={this.getFiles.bind(this)} />
+          </div>
+          <div className="form-group">
+            <label className="mb-1">Video Youtube Link</label>
+            <input
+              type="text"
+              className="form-control"
+              id="blogVideo"
+              value={this.state.blogVideo}
+              onChange={this.onChangeBlogVideo}
+              placeholder="Video Linki Giriniz"
+            />
           </div>
           <div className="form-group">
             <label className="mb-1">Kısa Yazı</label>

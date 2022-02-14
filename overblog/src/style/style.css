@@ -443,26 +443,44 @@ footer {
 .blogDetail {
   font-family: "Times New Roman", Times, serif;
   text-align: center;
-  font-size: 50px;
-  padding: 7% 17% 7% 17%;
+  font-size: 55px;
+  padding: 7% 11% 7% 11%;
   background: #f3f5f7;
 }
 .blogDetail1 {
   text-align: justify;
-  font-size: 12px;
+  font-size: 30%;
+  margin-top: 3rem;
+  letter-spacing: 1.1px;
+  line-height: 1.5;
   background: #f3f5f7;
+  font-family: "Times New Roman", Times, serif;
 }
 .blogDetailImage {
   width: 55rem;
   height: 80vh;
-
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  display: flex;
+  margin: auto;
   margin-bottom: 5rem;
+}
+#blogDetailVideo {
+  width: auto;
+  height: auto;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  display: flex;
+
+  margin-bottom: 3rem;
 }
 @media only screen and (max-width: 1025px) and (min-width: 960px) {
   .blogDetail {
     text-align: left;
-    font-size: 50px;
-    padding: 15%;
+    font-size: 65px;
+    padding: 10% 11% 10% 11%;
     background: #f3f5f7;
   }
   .blogDetailImage {
@@ -471,12 +489,15 @@ footer {
     margin-top: 2rem;
     margin-bottom: 2rem;
   }
+  #blogDetailVideo {
+    margin: auto;
+  }
 }
 @media only screen and (max-width: 960px) and (min-width: 750px) {
   .blogDetail {
     text-align: left;
-    font-size: 50px;
-    padding: 15%;
+    font-size: 70px;
+    padding: 10% 10% 10% 10%;
     background: #f3f5f7;
   }
   .blogDetailImage {
@@ -489,6 +510,13 @@ footer {
     margin-right: auto;
     margin-bottom: 2rem;
   }
+  #blogDetailVideo {
+    margin: auto;
+    width: auto;
+    height: auto;
+    margin-top: 33px;
+    margin-bottom: 33px;
+  }
   .blogDetail1 {
     text-align: left;
   }
@@ -497,8 +525,15 @@ footer {
   .blogDetail {
     text-align: left;
     font-size: 50px;
-    padding: 15%;
+    padding: 10% 11% 10% 11%;
     background: #f3f5f7;
+  }
+  #blogDetailVideo {
+    margin: auto;
+    width: auto;
+    height: auto;
+    margin-top: 33px;
+    margin-bottom: 33px;
   }
   .blogDetailImage {
     width: 17rem;
@@ -518,8 +553,15 @@ footer {
   .blogDetail {
     text-align: left;
     font-size: 50px;
-    padding: 15%;
+    padding: 10% 11% 10% 11%;
     background: #f3f5f7;
+  }
+  #blogDetailVideo {
+    margin: auto;
+    width: auto;
+    height: auto;
+    margin-top: 33px;
+    margin-bottom: 33px;
   }
   .blogDetailImage {
     width: 14.5rem;
@@ -532,7 +574,14 @@ footer {
     margin-right: auto;
   }
   .blogDetail1 {
-    text-align: left;
+    width: 15rem;
+    line-height: normal;
+    letter-spacing: 1px;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
   }
 }
 

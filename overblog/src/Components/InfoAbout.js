@@ -9,12 +9,13 @@ export default class InfoAbout extends Component {
           <h1 className="infoAboutTitle">Hakkımda</h1>
           <hr />
           <p className="infoAboutResume">
-            Ankara Üniversitesi İletişim Fakültesi Gazetecilik bölüm
-            öğrencisiyim. İletişim biliminin disiplinler arası bir bilim
-            olduğunu göz önüne alarak yalnızca iletişim alanında değil
-            Sosyoloji, Edebiyat ve Tarih başka olmak üzere birçok sosyal bilim
-            hakkında bilgi sahibi olmaya çabalıyor ve bu çabalarımı
-            karalamalarıma yansıtmaya çalışıyorum.
+            Ben Enes Karaaslan. Milenyumun ortasına doğmanın etkisiyle artan
+            Enes enflasyonu nedeniyle Alpagut E. Karaaslan olarak anılmayı
+            yeğliyorum. Ortaöğretim boyunca sayısal ağırlıklı eğitim görmemin
+            aksine düşlerimin ardından gitme kararı almamla birlikte yaşamımın
+            geri kalan bölümünü etkileyecek ve şimdiden etkilemeye başlayan
+            Ankara Üniversitesi İletişim Fakültesi Gazetecilik bölümü 3. sınıf
+            öğrencisiyim.
           </p>
           <a href="/about" className="infoAboutButton">
             <i class="fa fa-arrow-right"></i>&nbsp;Detaylı bilgi için

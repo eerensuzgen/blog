@@ -15,6 +15,7 @@ router.route("/newBlog").post((req, res) => {
   const createdAt = req.body.createdAt;
   const updatedAt = req.body.updatedAt;
   const blog = req.body.blog;
+  const blogVideo = req.body.blogVideo;
 
   const newBlog = new Blog({
     title,
@@ -24,6 +25,7 @@ router.route("/newBlog").post((req, res) => {
     updatedAt,
     shortCut,
     blog,
+    blogVideo,
   });
 
   newBlog
@@ -54,6 +56,7 @@ router.route("/updateBlog/:id").post((req, res) => {
       Blog.updatedAt = req.body.updatedAt;
       Blog.shortCut = req.body.shortCut;
       Blog.blog = req.body.blog;
+      Blog.blogVideo = req.body.blogVideo;
 
       Blog.save()
         .then(() => res.json("Blog updated!"))

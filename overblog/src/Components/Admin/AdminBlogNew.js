@@ -12,9 +12,15 @@ export default class AdminNewUsers extends Component {
   }
   handleSubmit = () => {
     let date = new Date();
-    let currentDate = `${date.getDate()}.${
-      date.getMonth() + 1
-    }.${date.getFullYear()}   ${date.getHours()}.${
+    let currentDate = `${
+      date.getDate() < 10 ? "0" + date.getDate() : "" + date.getDate()
+    }.${
+      date.getMonth() + 1 < 10
+        ? "0" + (date.getMonth() + 1)
+        : "" + (date.getMonth() + 1)
+    }.${date.getFullYear()}   ${
+      date.getHours() < 10 ? "0" + date.getHours() : "" + date.getHours()
+    }.${
       date.getMinutes() < 10 ? "0" + date.getMinutes() : "" + date.getMinutes()
     }`;
     const newBlog = {
@@ -24,6 +30,7 @@ export default class AdminNewUsers extends Component {
       createdAt: String(currentDate),
       updatedAt: String(currentDate),
       shortcut: document.getElementById("shortcut").value,
+      blogVideo: document.getElementById("blogVideo").value,
       blog: ckData,
     };
     console.log(newBlog);
@@ -71,6 +78,15 @@ export default class AdminNewUsers extends Component {
           <div className="form-group">
             <label className="mb-1">Yazı Fotoğraf</label>
             <FileBase64 multiple={false} onDone={this.getFiles.bind(this)} />
+          </div>
+          <div className="form-group">
+            <label className="mb-1">Video Youtube Link</label>
+            <input
+              type="text"
+              className="form-control"
+              id="blogVideo"
+              placeholder="Video Linki Giriniz"
+            />
           </div>
           <div className="form-group">
             <label className="mb-1">Kısa Yazı</label>

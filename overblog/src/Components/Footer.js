@@ -32,6 +32,15 @@ export default class Footer extends Component {
             {" "}
             <i className="fa fa-linkedin fa-2x"></i>
           </a>
+          <a
+            href="https://www.youtube.com/channel/UCljaZ6x81zVku5SLeQ4Gt3g/"
+            target="_blank"
+            rel="noreferrer"
+            className="footerIcon"
+          >
+            {" "}
+            <i className="fa fa-youtube fa-2x"></i>
+          </a>
         </div>
         <div className="footerBlock1">
           <p className="footerCopyRight">

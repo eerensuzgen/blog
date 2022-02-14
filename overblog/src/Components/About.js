@@ -16,39 +16,38 @@ export default class About extends Component {
             className="aboutImage1"
           />
           <p className="aboutBioText">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu
-            purus non velit vestibulum accumsan. Quisque id tortor eu lectus
-            placerat suscipit at nec ligula. Mauris in maximus mauris, vitae
-            facilisis velit. Sed faucibus, lacus ut sodales fermentum, tortor
-            mauris sagittis sapien, id suscipit ligula ligula vel metus. Nulla
-            ultrices ornare sem et placerat. Proin aliquam nec augue id
-            tincidunt. Proin venenatis rhoncus augue non pulvinar. Curabitur
-            hendrerit mauris sed scelerisque tempor. Nunc consectetur, eros sed
-            tempor hendrerit, elit tellus interdum quam, ac pulvinar mauris
-            lacus a justo. In a pretium tellus, ut dapibus odio. Nam ultrices,
-            elit eget fringilla volutpat, eros elit fermentum libero, eget
-            dignissim sapien tortor eu urna. Sed turpis sapien, molestie vitae
-            imperdiet ut, mollis sed nibh. Duis a lacus felis. Vivamus mauris
-            enim, iaculis ut vehicula vitae, pellentesque id massa. Nulla
-            facilisi. Mauris gravida mauris velit, vitae malesuada sapien
-            maximus sit amet. Morbi imperdiet eu mauris ac placerat. Duis nisl
-            tortor, molestie non enim vel, tempus ultricies justo. Suspendisse
-            et porttitor quam. Integer scelerisque sit amet odio at iaculis.
-            Maecenas mollis neque vitae lacus dapibus, id condimentum sapien
-            scelerisque. Praesent sed ornare neque, eu vulputate quam. Nam
-            laoreet suscipit diam, id sollicitudin massa ultrices ut. Nam
-            ullamcorper, libero eget iaculis commodo, turpis magna vestibulum
-            nibh, quis congue nibh tellus et mauris. Integer ac risus nibh.
-            Nullam rutrum, diam ut ornare aliquet, tortor diam blandit massa, at
-            sagittis enim lacus vel nisl. Phasellus egestas auctor mauris et
-            bibendum. Proin lobortis vel eros venenatis sollicitudin. Etiam leo
-            ex, iaculis sit amet velit eget, rutrum tincidunt dolor. In vel
-            ipsum sollicitudin magna lobortis rhoncus. Pellentesque id consequat
-            dolor, a fermentum est. Aliquam sed finibus leo. Interdum et
-            malesuada fames ac ante ipsum primis in faucibus. Etiam tempor
-            aliquam massa sed maximus. Proin bibendum, nibh et dignissim
-            volutpat, odio mauris pretium ligula, et dignissim erat felis eget
-            lorem. Suspendisse porta ut velit sed malesuada.
+            Okuduğunuz ve okumayı yarıda keseceğiniz endişesiyle kısa kestiğim
+            bu yazıya, bütün harf ve noktalama işaretlerine gözünüzün değmesi
+            dileğiyle başlamak istiyorum. Endişenin ağırlığı omuzlarımda, pek
+            tabii kısa kesmemin bir diğer nedeni de “Hakkımda” başlığı adı
+            altında sizlere sunabilecek denli yetkinliklere ulaştığım
+            konusundaki çekincelerimdir. Bilmenin ve bilebilmenin verdiği
+            mutluluğu duyumsayarak kendim hakkında daha çok bilgiye sahip olma
+            dileğini taşımanın yanında, her şeyi bilebilmenin olanaksızlığı
+            yolunda yürümenin beni ne gibi güçlüklerle karşı karşıya
+            bırakacağını tahmin ediyorum. <br /> Ben Enes Karaaslan. Milenyumun
+            ortasına doğmanın etkisiyle artan Enes enflasyonu nedeniyle Alpagut
+            E. Karaaslan olarak anılmayı yeğliyorum. Ortaöğretim boyunca sayısal
+            ağırlıklı eğitim görmemin aksine düşlerimin ardından gitme kararı
+            almamla birlikte yaşamımın geri kalan bölümünü etkileyecek ve
+            şimdiden etkilemeye başlayan Ankara Üniversitesi İletişim Fakültesi
+            Gazetecilik bölümü 3. sınıf öğrencisiyim. İletişim biliminin
+            disiplinler arası bir bilim olduğunu göz önüne alarak yalnızca
+            iletişim alanında değil Sosyoloji, Edebiyat, Felsefe ve Tarih başta
+            olmak üzere birçok sosyal bilim hakkında bilgi sahibi olmaya
+            çabalıyorum. Bilginin tartışmaya, tartışmanın bilgiye evirildiği
+            düşüncesinde biri olarak sahip olmaya çabaladığım bilgilerin
+            ışığında yazdığım her türlü yazıyı paylaşacağım kuskulu.com ile yeni
+            bilgilere kapı aralamayı amaçlıyorum. Bu amacı göz önünde
+            bulundurarak belleğin bulanıklığı ile saydamlığı ilkelerinin
+            birbirine bağımlılığı tarihsel süreç içerisinde kanıtlanan ve bu
+            nedenle son sözünü daha söylemeyen kuşkunun aydınlığında yaşamı
+            görünür kılmak adına kuşkuya bağlılığımı dile getirmek için
+            “Kuşkulu” adını benimsiyorum. Böylelikle “kuşkunun kuşkusuzluğuyla
+            kuşkulu günlere…” ilkesini bir dilek olarak değil amaç olarak
+            nitelendiriyorum. Kuşkuyla haykırıyorum ve herkesi dillerden
+            düşmeyen, en önemlisi belleklerden silinmeyecek bir biçimde
+            haykırmaya çağırıyorum: Kuşkunun kuşkusuzluğuyla kuşkulu günlere…
           </p>
         </div>
         <br />
