@@ -1,6 +1,11 @@
 import React, { Component } from "react";
 
 export default class AdminDashboard extends Component {
+  handleSubmit = () => {
+    sessionStorage.clear();
+    window.open("/", "_self");
+  };
+
   render() {
     return (
       <div className="mt-5 ">
@@ -20,7 +25,10 @@ export default class AdminDashboard extends Component {
             Yazılarım
           </a>
 
-          <a className="btn btn-danger col-md-2 mt-3 btn-lg" href="/">
+          <a
+            className="btn btn-danger col-md-2 mt-3 btn-lg"
+            onClick={this.handleSubmit}
+          >
             Çıkış Yap
           </a>
         </div>

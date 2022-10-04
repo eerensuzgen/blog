@@ -15,6 +15,7 @@ import AdminBlog from "./Components/Admin/AdminBlog";
 import AdminBlogNew from "./Components/Admin/AdminBlogNew";
 import AdminBlogEdit from "./Components/Admin/AdminBlogEdit";
 import axios from "axios";
+import { ProtectedRoute } from "./Components/Admin/protectedRoute";
 
 class App extends Component {
   constructor(props) {
@@ -136,8 +137,8 @@ class App extends Component {
               />
             )}
           />
-          <Route path="/adminDashboard" component={AdminDashboard} />
-          <Route
+          <ProtectedRoute path="/adminDashboard" component={AdminDashboard} />
+          <ProtectedRoute
             path="/adminBlog"
             component={(props) => (
               <AdminBlog
@@ -148,8 +149,8 @@ class App extends Component {
               />
             )}
           />
-          <Route path="/adminBlogNew" component={AdminBlogNew} />
-          <Route path="/adminBlogEdit" component={AdminBlogEdit} />
+          <ProtectedRoute path="/adminBlogNew" component={AdminBlogNew} />
+          <ProtectedRoute path="/adminBlogEdit" component={AdminBlogEdit} />
           <Route component={NotFound} />
         </Switch>
       </div>

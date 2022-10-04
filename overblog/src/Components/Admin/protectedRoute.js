@@ -1,13 +1,13 @@
-import auth from "../Admin/auth";
 import { Route, Redirect } from "react-router-dom";
 import React from "react";
+import { loginKey, loginValue } from "./auth";
 
 export const ProtectedRoute = ({ component: Component, ...rest }) => {
   return (
     <Route
       {...rest}
       render={(props) => {
-        if (auth.isAuthenticated()) {
+        if (sessionStorage.getItem(loginKey) == loginValue) {
           return <Component {...props} />;
         } else {
           return (

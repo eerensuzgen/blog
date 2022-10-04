@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { loginKey, loginValue } from "./auth";
 
 export default class AdminLogin extends Component {
   handleSubmit = () => {
@@ -8,6 +9,7 @@ export default class AdminLogin extends Component {
       this.props.admins[0].password ===
         document.getElementById("userPassword").value
     ) {
+      sessionStorage.setItem(loginKey, loginValue);
       alert("Giriş Başarılı");
       window.open("/adminDashboard", "_self");
     } else {
