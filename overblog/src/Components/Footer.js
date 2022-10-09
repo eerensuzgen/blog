@@ -43,6 +43,14 @@ export default class Footer extends Component {
           </a>
         </div>
         <div className="footerBlock1">
+          <p>
+            Bu internet sitesindeki görsel, işitsel ve metinsel bütün
+            içeriklerin kullanım hakkı kuskulu.com'da saklıdır. İçeriklerin tümü
+            5846 sayılı Fikir ve Sanat Eserleri Yasası ve 6769 sayılı Sınai
+            Mülkiyet Yasası kapsamında izinsiz kullanılamaz
+          </p>
+        </div>
+        <div className="footerBlock1">
           <p className="footerCopyRight">
             &copy; Copyright 2021 | Design by&nbsp;
             <a href="/" id="footerCreater">

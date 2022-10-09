@@ -4,7 +4,7 @@ export default class InfoAbout extends Component {
   render() {
     return (
       <div className="infoAbout">
-        <img src="./img/pp.jpg" alt="pp" id="pp" />
+        <img src="./img/pp.webp" alt="pp" id="pp" />
         <div className="infoAboutText">
           <h1 className="infoAboutTitle">Hakkımda</h1>
           <hr />
@@ -14,7 +14,7 @@ export default class InfoAbout extends Component {
             yeğliyorum. Ortaöğretim boyunca sayısal ağırlıklı eğitim görmemin
             aksine düşlerimin ardından gitme kararı almamla birlikte yaşamımın
             geri kalan bölümünü etkileyecek ve şimdiden etkilemeye başlayan
-            Ankara Üniversitesi İletişim Fakültesi Gazetecilik bölümü 3. sınıf
+            Ankara Üniversitesi İletişim Fakültesi Gazetecilik bölümü 4. sınıf
             öğrencisiyim.
           </p>
           <a href="/about" className="infoAboutButton">

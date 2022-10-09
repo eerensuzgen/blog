@@ -10,7 +10,7 @@ export default class About extends Component {
         <div className="aboutBioBlock">
           {" "}
           <img
-            src="./img/pp.jpg"
+            src="./img/pp.webp"
             alt="profilePhoto"
             id="aboutImage"
             className="aboutImage1"
@@ -54,13 +54,13 @@ export default class About extends Component {
         <div>
           <h1 id="aboutSchoolTitle">Eğitim</h1>
           <hr className="aboutHr" />
-          <img src="./img/aü.jpg" alt="schoolImage" id="aboutSchoolImage" />
+          <img src="./img/aü.webp" alt="schoolImage" id="aboutSchoolImage" />
           <h1 className="aboutSchoolTitle">
             Ankara Üniversitesi İletişim Fakültesi - Gazetecilik
           </h1>
           <h6 className="aboutSchoolDate">2019 - Devam ediyor</h6>
           <img
-            src="./img/yal.png"
+            src="./img/yal.webp"
             alt="schoolImage"
             className="aboutSchoolImage2"
           />

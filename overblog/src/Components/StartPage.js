@@ -6,7 +6,7 @@ export default class StartPage extends Component {
       <div className="startOverBlog container">
         <div>
           <img
-            src="/img/background.jpg"
+            src="/img/background.webp"
             alt="startpageImage"
             className="startImageBox"
           />
