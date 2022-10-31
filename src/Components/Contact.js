@@ -93,7 +93,7 @@ export default class Contact extends Component {
                       <div className="app-form-group buttons">
                         <input
                           onClick={function () {
-                            alert("a");
+                            alert("İletiniz Gönderilmiştir.");
                           }}
                           value=" Gönder"
                           type="submit"

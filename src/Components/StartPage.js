@@ -23,7 +23,7 @@ export default class StartPage extends Component {
         >
           <span className="display-6">
             Uçaklar süzülüyor gökle boyadığım <br />
-            Büyük, çok Büyük
+            Büyük, çok büyük
             <br />
             Gazete kâğıtlarından yaptığım <br />
             Çocukluğumda.

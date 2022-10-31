@@ -661,7 +661,7 @@ footer {
   width: 110vh;
   height: 75vh;
 }
-@media only screen and (max-width: 1025px) and (min-width: 750px) {
+@media only screen and (max-width: 1440px) and (min-width: 750px) {
   .startOverBlog {
     display: flex;
     justify-content: space-between;

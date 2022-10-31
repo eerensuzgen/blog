@@ -42,8 +42,8 @@ export default class Footer extends Component {
             <i className="fa fa-youtube fa-2x"></i>
           </a>
         </div>
-        <div className="footerBlock1">
-          <p>
+        <div className="footerBlock1 w-100 text-center m-3">
+          <p style={{ maxWidth: "65%" }}>
             Bu internet sitesindeki görsel, işitsel ve metinsel bütün
             içeriklerin kullanım hakkı kuskulu.com'da saklıdır. İçeriklerin tümü
             5846 sayılı Fikir ve Sanat Eserleri Yasası ve 6769 sayılı Sınai
@@ -52,7 +52,7 @@ export default class Footer extends Component {
         </div>
         <div className="footerBlock1">
           <p className="footerCopyRight">
-            &copy; Copyright 2021 | Design by&nbsp;
+            &copy; Copyright 2022 | Design by&nbsp;
             <a href="/" id="footerCreater">
               SÜZKON
             </a>

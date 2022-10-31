@@ -8,7 +8,7 @@ export default class InfoAbout extends Component {
         <div className="infoAboutText">
           <h1 className="infoAboutTitle">Hakkımda</h1>
           <hr />
-          <p className="infoAboutResume">
+          <p className="infoAboutResume text-justify">
             Ben Enes Karaaslan. Milenyumun ortasına doğmanın etkisiyle artan
             Enes enflasyonu nedeniyle Alpagut E. Karaaslan olarak anılmayı
             yeğliyorum. Ortaöğretim boyunca sayısal ağırlıklı eğitim görmemin
